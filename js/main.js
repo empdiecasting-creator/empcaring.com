@@ -132,25 +132,12 @@
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending...';
 
-        // Collect form data
+        // Collect form data (includes hidden access_key from HTML)
         var formData = new FormData(contactForm);
 
         // Set email subject based on selected product
         var productValue = formData.get('product') || 'General';
         formData.set('subject', 'New B2B Inquiry — ' + productValue);
-
-        // Check access key is configured
-        var accessKeyValue = formData.get('access_key');
-        if (!accessKeyValue || accessKeyValue === 'YOUR_ACCESS_KEY') {
-          submitBtn.disabled = false;
-          submitBtn.textContent = originalText;
-          var errMsg = document.createElement('p');
-          errMsg.className = 'form-error';
-          errMsg.style.cssText = 'color: var(--color-error); font-size: 0.9rem; margin-top: 1rem; text-align: center;';
-          errMsg.textContent = 'Form not configured yet. Please email us at export@smartelderlycare.com';
-          contactForm.appendChild(errMsg);
-          return;
-        }
 
         // Submit to Web3Forms
         fetch('https://api.web3forms.com/submit', {
