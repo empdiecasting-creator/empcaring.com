@@ -21,7 +21,7 @@
   --color-border-light:   rgba(0,0,0,0.06);   /* Subtle dividers */
 
   --color-text:           #1A1917;   /* Near-black body text — never pure #000 */
-  --color-text-muted:     #595753;   /* Secondary text — ≥4.5:1 on white */
+  --color-text-muted:     #504E4A;   /* Secondary text — ≥5:1 on white */
   --color-text-inverse:   #FFFFFF;   /* Text on dark backgrounds */
 
   --color-btn-bg:         #111111;   /* Primary button background */
@@ -40,25 +40,25 @@
   --font-editorial:       'Sora', sans-serif;
   --font-mono:            'Geist Mono', 'SF Mono', 'JetBrains Mono', 'Fira Code', monospace;
 
-  /* Type scale — fluid with clamp() */
-  --text-xs:              clamp(0.6875rem, 0.5vw + 0.5rem, 0.75rem);     /* 11-12px */
-  --text-sm:              clamp(0.8125rem, 0.5vw + 0.5rem, 0.875rem);    /* 13-14px */
-  --text-base:            clamp(0.9375rem, 0.5vw + 0.6rem, 1.0625rem);   /* 15-17px */
-  --text-lg:              clamp(1.0625rem, 0.7vw + 0.6rem, 1.1875rem);   /* 17-19px */
-  --text-xl:              clamp(1.1875rem, 1vw + 0.6rem, 1.375rem);      /* 19-22px */
-  --text-2xl:             clamp(1.375rem, 1.5vw + 0.7rem, 1.75rem);      /* 22-28px */
-  --text-3xl:             clamp(1.75rem, 2vw + 0.8rem, 2.25rem);         /* 28-36px */
-  --text-4xl:             clamp(2rem, 2.5vw + 1rem, 3rem);               /* 32-48px */
-  --text-5xl:             clamp(2.5rem, 3vw + 1.2rem, 3.75rem);          /* 40-60px */
+  /* Type scale — fluid with clamp(), ≥1.25 ratio between steps */
+  --text-xs:              clamp(0.6875rem, 0.4vw + 0.55rem, 0.75rem);    /* 11–12px */
+  --text-sm:              clamp(0.8125rem, 0.4vw + 0.6rem, 0.9375rem);   /* 13–15px */
+  --text-base:            clamp(0.9375rem, 0.5vw + 0.7rem, 1.125rem);    /* 15–18px */
+  --text-lg:              clamp(1.125rem, 0.6vw + 0.8rem, 1.3125rem);    /* 18–21px */
+  --text-xl:              clamp(1.3125rem, 0.8vw + 0.8rem, 1.5625rem);   /* 21–25px */
+  --text-2xl:             clamp(1.5625rem, 1vw + 0.9rem, 1.875rem);      /* 25–30px */
+  --text-3xl:             clamp(1.875rem, 1.2vw + 1rem, 2.25rem);        /* 30–36px */
+  --text-4xl:             clamp(2.25rem, 1.5vw + 1.2rem, 2.75rem);       /* 36–44px */
+  --text-5xl:             clamp(2.75rem, 2vw + 1.5rem, 3.5rem);          /* 44–56px */
 
   --font-normal:          400;
   --font-medium:          500;
   --font-semibold:        600;
   --font-bold:            700;
 
-  --leading-tight:        1.15;
-  --leading-snug:         1.3;
-  --leading-normal:       1.6;
+  --leading-tight:        1.2;
+  --leading-snug:         1.35;
+  --leading-normal:       1.65;
   --leading-relaxed:      1.75;
 
   --tracking-tight:       -0.03em;

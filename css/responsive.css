@@ -2,12 +2,21 @@
    Responsive Overrides — Mobile-first, breakpoints add complexity
    ============================================================ */
 
+/* ---- Mobile base (under 768px) ---- */
+.section {
+  padding-block: var(--space-12);
+}
+
+.section--sm {
+  padding-block: var(--space-8);
+}
+
+.page-hero {
+  padding-block: var(--space-12) var(--space-8);
+}
+
 /* ---- Tablet: 768px+ ---- */
 @media (min-width: 768px) {
-
-  /* Navigation: already handled in header.css */
-
-  /* Product grid: already handled in layout.css (grid--2, grid--3, grid--4) */
 
   /* Stat grid */
   .stat-grid {
@@ -24,18 +33,18 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Page hero: reduce padding on tablet */
-  .page-hero {
-    padding-block: var(--space-20) var(--space-12);
-  }
-
-  /* Section spacing: reduce slightly on larger screens */
+  /* Section spacing */
   .section {
-    padding-block: var(--space-24);
+    padding-block: var(--space-20);
   }
 
   .section--sm {
-    padding-block: var(--space-16);
+    padding-block: var(--space-12);
+  }
+
+  /* Page hero */
+  .page-hero {
+    padding-block: var(--space-20) var(--space-12);
   }
 
   /* CTA section */
