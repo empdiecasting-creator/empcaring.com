@@ -160,7 +160,7 @@
           'Product Interest: ' + (form.querySelector('[name="product_interest"]')?.value || '') + '\n' +
           'Message: ' + (form.querySelector('[name="message"]')?.value || '')
         );
-        window.location.href = 'mailto:sales@caringtech.com?subject=' + subject + '&body=' + body;
+        window.location.href = 'mailto:sales@empcaring.com?subject=' + subject + '&body=' + body;
 
         if (successEl) {
           successEl.classList.add('form-success--visible');
