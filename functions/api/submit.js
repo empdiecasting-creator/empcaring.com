@@ -1,11 +1,6 @@
 // Cloudflare Pages Function — contact form handler
 // POST /api/submit — sends email via Resend, redirects back to contact page
 
-// Simple in-memory rate limiter (resets on deploy, good enough for B2B)
-const rateMap = new Map();
-const RATE_LIMIT = 3;       // max submissions
-const RATE_WINDOW = 60_000; // per minute
-
 export async function onRequestPost({ request, env }) {
   const formData = await request.formData();
 
@@ -49,17 +44,6 @@ export async function onRequestPost({ request, env }) {
     return Response.redirect(`${new URL(request.url).origin}/contact?success=1`, 302);
   }
 
-  // ── 3. Rate limit by IP ──
-  const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
-  const now = Date.now();
-  const record = rateMap.get(ip) || { count: 0, reset: now + RATE_WINDOW };
-  if (now > record.reset) { record.count = 0; record.reset = now + RATE_WINDOW; }
-  record.count++;
-  rateMap.set(ip, record);
-  if (record.count > RATE_LIMIT) {
-    return Response.redirect(`${new URL(request.url).origin}/contact?success=0`, 302);
-  }
-
   try {
     const res = await fetch('https://api.resend.com/emails', {
       method: 'POST',
@@ -69,7 +53,7 @@ export async function onRequestPost({ request, env }) {
       },
       body: JSON.stringify({
         from: 'EmpCaring <noreply@empcaring.com>',
-        to: [env.CONTACT_EMAIL || 'wayhumdragon@gmail.com'],
+        to: [env.CONTACT_EMAIL || 'contact@empcaring.com'],
         subject: `New inquiry from ${name} — ${company || 'No company'}`,
         reply_to: email,
         html: `
