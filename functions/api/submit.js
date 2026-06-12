@@ -21,8 +21,8 @@ export async function onRequestPost({ request, env }) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'EmpCaring Contact <info@empcaring.com>',
-        to: ['info@empcaring.com'],
+        from: 'EmpCaring Contact <onboarding@resend.dev>',
+        to: ['wayhumdragon@gmail.com'],
         subject: `New inquiry from ${name} — ${company || 'No company'}`,
         reply_to: email,
         html: `
