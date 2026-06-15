@@ -26,6 +26,14 @@
 
   <!-- Favicon (inline SVG) -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%232C5F4E'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='serif' font-size='18' font-weight='bold'>E</text></svg>">
+  <style>
+    @media (max-width: 767px) {
+      .hero-split { grid-template-columns: 1fr !important; min-height: auto !important; }
+      .hero-mosaic { max-width: 100% !important; }
+      .prod-row { grid-template-columns: 1fr !important; }
+      .prod-row > *:first-child { order: unset !important; }
+    }
+  </style>
 </head>
 <body>
 
@@ -84,17 +92,30 @@
 <main id="main-content">
 
   <!-- ====== HERO ====== -->
-  <section class="page-hero" style="padding-block: var(--space-20) var(--space-12); min-height: auto; display: flex; align-items: center;">
-    <div class="container" style="text-align:center;max-width:680px;margin-inline:auto;">
-      <h1 class="page-hero__title reveal" style="margin-bottom:var(--space-5);max-width:none;">
-        Elderly care products, factory-direct.
-      </h1>
-      <p class="page-hero__subtitle reveal" style="margin-bottom:var(--space-8);max-width:560px;margin-inline:auto;">
-        Walking canes, grab bars, transfer chairs, and health monitoring rings — manufactured in our facility and delivered factory-direct at bulk pricing.
-      </p>
-      <div class="flex flex-gap reveal" style="flex-wrap:wrap;justify-content:center;">
-        <a href="products.html" class="btn btn--primary btn--lg">View Products</a>
-        <a href="contact.html" class="btn btn--outline btn--lg">Get a Quote</a>
+  <section style="background:var(--color-primary-dark);padding:var(--space-24) 0 var(--space-16);position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(212,167,106,0.10) 0%,transparent 50%),radial-gradient(ellipse at 30% 80%,rgba(44,95,78,0.3) 0%,transparent 50%);pointer-events:none;"></div>
+    <div class="container" style="position:relative;z-index:2;">
+      <div class="hero-split" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12);align-items:center;min-height:60vh;">
+        <!-- Left: Copy -->
+        <div>
+          <h1 class="reveal" style="font-family:'Sora',sans-serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:700;letter-spacing:-0.03em;line-height:1.1;color:#fff;margin-bottom:var(--space-4);text-wrap:balance;">
+            Your direct source for elderly care equipment
+          </h1>
+          <p class="reveal" style="font-size:var(--text-lg);color:rgba(255,255,255,0.7);line-height:1.6;margin-bottom:var(--space-8);max-width:480px;">
+            We manufacture walking canes, grab bars, transfer chairs, and health monitoring rings — and ship them factory-direct to nursing homes, hospitals, and care facilities worldwide.
+          </p>
+          <div class="flex flex-gap reveal" style="flex-wrap:wrap;">
+            <a href="products.html" class="btn btn--lg" style="background:var(--color-accent);color:var(--color-primary-dark);font-weight:700;border-color:var(--color-accent);">Explore Products</a>
+            <a href="contact.html" class="btn btn--lg" style="background:transparent;border:1px solid rgba(255,255,255,0.3);color:#fff;">Request a Quote</a>
+          </div>
+        </div>
+        <!-- Right: Product mosaic -->
+        <div class="reveal hero-mosaic" style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:4px;aspect-ratio:1;border-radius:var(--radius-md);overflow:hidden;max-width:480px;margin-left:auto;">
+          <a href="solutions/smart-cane.html" style="overflow:hidden;"><img src="assets/images/products/cane/cane-silver.jpg" alt="Walking Cane" style="width:100%;height:100%;object-fit:cover;"></a>
+          <a href="solutions/grab-bars.html" style="overflow:hidden;"><img src="assets/images/products/grab bar/gb-01.webp" alt="Grab Bars" style="width:100%;height:100%;object-fit:cover;"></a>
+          <a href="solutions/transfer-device.html" style="overflow:hidden;"><img src="assets/images/products/transfer/Shifter Blue.avif" alt="Transfer Device" style="width:100%;height:100%;object-fit:cover;"></a>
+          <a href="solutions/smart-ring.html" style="overflow:hidden;"><img src="assets/images/products/smart ring/silver.webp" alt="Smart Ring" style="width:100%;height:100%;object-fit:cover;"></a>
+        </div>
       </div>
     </div>
   </section>
@@ -102,88 +123,59 @@
   <!-- ====== PRODUCT HIGHLIGHTS ====== -->
   <section class="section">
     <div class="container">
-      <div style="text-align: center; margin-bottom: var(--space-16);" class="reveal">
-        <h2 style="margin-bottom: var(--space-4);">Products designed for professional care</h2>
-        <p style="color: var(--color-text-muted); max-width: 560px; margin-inline: auto;">
-          Every product we make is built for the demands of commercial care environments —
-          durable, easy to maintain, and backed by comprehensive B2B support.
+      <div style="text-align:center;margin-bottom:var(--space-16);" class="reveal">
+        <h2 style="margin-bottom:var(--space-4);">Products designed for professional care</h2>
+        <p style="color:var(--color-text-muted);max-width:560px;margin-inline:auto;">
+          Every product we make is built for the demands of commercial care environments.
         </p>
       </div>
 
-      <div class="grid grid--2 grid--gap-lg reveal-stagger">
-        <!-- Walking Cane Card -->
-        <div class="product-card">
-          <div class="product-card__image">
-            <img src="assets/images/products/cane/cane-hero.webp" alt="Adjustable quad walking cane" style="width:100%;height:100%;object-fit:cover;">
+      <!-- Walking Cane — image left -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12);align-items:center;margin-bottom:var(--space-16);" class="prod-row" class="reveal">
+        <div style="aspect-ratio:4/3;border-radius:var(--radius-md);overflow:hidden;">
+          <img src="assets/images/products/cane/cane-hero.webp" alt="Walking Cane" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div>
+          <h3 style="font-family:'Sora',sans-serif;font-size:var(--text-2xl);font-weight:700;margin-bottom:var(--space-3);">Walking Cane</h3>
+          <p style="color:var(--color-text-muted);margin-bottom:var(--space-4);">Adjustable aluminum quad cane. 350g, 4-leg stable base, T-handle grip, 70–95 cm range, 4 colors.</p>
+          <a href="solutions/smart-cane.html" style="font-weight:600;color:var(--color-primary);">View details <i class="ph ph-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Grab Bars — image right -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12);align-items:center;margin-bottom:var(--space-16);" class="prod-row" class="reveal">
+        <div style="order:1;">
+          <h3 style="font-family:'Sora',sans-serif;font-size:var(--text-2xl);font-weight:700;margin-bottom:var(--space-3);">Grab Bars</h3>
+          <p style="color:var(--color-text-muted);margin-bottom:var(--space-4);">304 stainless steel, machined knurl grip. 32mm tube, 50 kg rated, 3 finishes, 10 lengths.</p>
+          <a href="solutions/grab-bars.html" style="font-weight:600;color:var(--color-primary);">View details <i class="ph ph-arrow-right"></i></a>
+        </div>
+        <div style="aspect-ratio:4/3;border-radius:var(--radius-md);overflow:hidden;">
+          <img src="assets/images/products/grab bar/gb-01.webp" alt="Grab Bars" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+      </div>
+
+      <!-- Transfer Device + Smart Ring — side by side -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12);align-items:start;margin-bottom:var(--space-16);" class="reveal">
+        <!-- Transfer Device -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);align-items:center;" class="prod-row">
+          <div style="aspect-ratio:1;border-radius:var(--radius-md);overflow:hidden;">
+            <img src="assets/images/products/transfer/Shifter Blue.avif" alt="Transfer Device" style="width:100%;height:100%;object-fit:cover;">
           </div>
-          <div class="product-card__body">
-            <h3 class="product-card__title">Walking Cane</h3>
-            <p class="product-card__desc">Adjustable aluminum quad walking cane with 4-leg stable base. 350g lightweight, 70–95 cm height range, 4 colors. Factory-direct pricing.</p>
-            <ul class="product-card__features">
-              <li>4-leg quad base — stands on its own</li>
-              <li>Aluminum alloy, 350g lightweight</li>
-              <li>70–95 cm adjustable height</li>
-            </ul>
-            <a href="solutions/smart-cane.html" class="product-card__link">
-              Learn more <i class="ph ph-arrow-right"></i>
-            </a>
+          <div>
+            <h3 style="font-family:'Sora',sans-serif;font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-2);">Transfer Chair</h3>
+            <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-2);">Hydraulic, 130 kg, built-in standing assist.</p>
+            <a href="solutions/transfer-device.html" style="font-weight:600;font-size:var(--text-sm);color:var(--color-primary);">View <i class="ph ph-arrow-right"></i></a>
           </div>
         </div>
-
-        <!-- Grab Bars Card -->
-        <div class="product-card">
-          <div class="product-card__image">
-            <img src="assets/images/products/grab bar/gb-01.webp" alt="304 stainless steel knurled grab bar" style="width:100%;height:100%;object-fit:cover;">
+        <!-- Smart Ring -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);align-items:center;" class="prod-row">
+          <div style="aspect-ratio:1;border-radius:var(--radius-md);overflow:hidden;">
+            <img src="assets/images/products/smart ring/ring-hero.webp" alt="Smart Ring" style="width:100%;height:100%;object-fit:cover;">
           </div>
-          <div class="product-card__body">
-            <h3 class="product-card__title">Grab Bars</h3>
-            <p class="product-card__desc">304 stainless steel bathroom safety bars with machined knurl grip. 32mm tubing, three finishes, 10 lengths — factory-direct pricing.</p>
-            <ul class="product-card__features">
-              <li>Diamond knurl anti-slip grip</li>
-              <li>50 kg rated load</li>
-              <li>Flange mount, stainless hardware included</li>
-            </ul>
-            <a href="solutions/grab-bars.html" class="product-card__link">
-              Learn more <i class="ph ph-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Transfer Device Card -->
-        <div class="product-card">
-          <div class="product-card__image">
-            <img src="assets/images/products/transfer/td-hero.avif" alt="Hydraulic patient transfer chair" style="width:100%;height:100%;object-fit:cover;">
-          </div>
-          <div class="product-card__body">
-            <h3 class="product-card__title">Transfer Device</h3>
-            <p class="product-card__desc">Hydraulic patient transfer chair with standing assist, commode, and dining table. 130 kg capacity, stainless steel frame, 3 colors.</p>
-            <ul class="product-card__features">
-              <li>130 kg weight capacity</li>
-              <li>Built-in standing assist</li>
-              <li>Hydraulic — no power needed</li>
-            </ul>
-            <a href="solutions/transfer-device.html" class="product-card__link">
-              Learn more <i class="ph ph-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Smart Ring Card -->
-        <div class="product-card">
-          <div class="product-card__image">
-            <img src="assets/images/products/smart ring/ring-hero.webp" alt="K3 health monitoring smart ring" style="width:100%;height:100%;object-fit:cover;">
-          </div>
-          <div class="product-card__body">
-            <h3 class="product-card__title">Smart Ring</h3>
-            <p class="product-card__desc">K3 health monitoring ring — 24/7 heart rate, SpO2, HRV, sleep tracking. 5ATM waterproof, 10-15 day battery, 3 colors.</p>
-            <ul class="product-card__features">
-              <li>24/7 HR · SpO2 · HRV · Sleep</li>
-              <li>5ATM waterproof · 10-15 day battery</li>
-              <li>US 6-13 · 3 colors · OEM available</li>
-            </ul>
-            <a href="solutions/smart-ring.html" class="product-card__link">
-              Learn more <i class="ph ph-arrow-right"></i>
-            </a>
+          <div>
+            <h3 style="font-family:'Sora',sans-serif;font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-2);">Smart Ring</h3>
+            <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-2);">K3 health ring, 5ATM, 10-15 day battery.</p>
+            <a href="solutions/smart-ring.html" style="font-weight:600;font-size:var(--text-sm);color:var(--color-primary);">View <i class="ph ph-arrow-right"></i></a>
           </div>
         </div>
       </div>
