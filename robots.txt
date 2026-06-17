@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://empcaring.com/sitemap.xml
