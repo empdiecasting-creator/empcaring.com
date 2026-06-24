@@ -21,7 +21,7 @@
     :root { --font-editorial: 'Sora', sans-serif; --font-sans: 'Manrope', sans-serif; --color-canvas: #FFFFFF; --color-surface-alt: #F4F6F4; }
 
     /* ── Hero ── */
-    .hero { background: var(--color-primary-dark); position: relative; overflow: hidden; }
+    .hero { background: #228274; position: relative; overflow: hidden; }
     .hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 20%, rgba(212,167,106,0.12) 0%, transparent 60%); pointer-events: none; }
     .hero__grid { display: grid; grid-template-columns: 3fr 2fr; min-height: 70vh; align-items: center; }
     .hero__text { display: flex; flex-direction: column; justify-content: center; padding: var(--space-12) var(--space-12) var(--space-12) 0; position: relative; z-index: 2; }
@@ -71,7 +71,7 @@
     .scene__body h4 { font-weight: 700; margin-bottom: var(--space-2); }
 
     /* ── CTA Bar ── */
-    .cta-bar { background: var(--color-primary-dark); color: #fff; padding: var(--space-16) 0; text-align: center; position: relative; overflow: hidden; }
+    .cta-bar { background: #228274; color: #fff; padding: var(--space-16) 0; text-align: center; position: relative; overflow: hidden; }
     .cta-bar::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, rgba(212,167,106,0.12) 0%, transparent 60%); pointer-events: none; }
     .cta-bar h2 { font-family: 'Sora', sans-serif; font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 700; letter-spacing: -0.02em; color: #fff; margin-bottom: var(--space-3); position: relative; z-index: 1; }
     .cta-bar p { color: rgba(255,255,255,0.7); margin-bottom: var(--space-8); position: relative; z-index: 1; }
@@ -98,7 +98,7 @@
 
 <header class="site-header" role="banner">
   <div class="site-header__inner">
-    <a href="../index.html" class="site-logo" style="font-family:.Sora.,sans-serif;"><img src="../assets/images/empcaring logo.png" alt="EmpCaring" style="height:40px;width:auto;"> <span style="font-family:'Sora',sans-serif;font-weight:700;font-size:var(--text-base);letter-spacing:0.03em;margin-left:var(--space-1);" class="brand-text" style="vertical-align:middle"><span style="color:#228274;">EMP</span><span style="color:var(--color-text);">CARING</span></span></a>
+    <a href="../index.html" class="site-logo" style="font-family:.Sora.,sans-serif;"><img src="../assets/images/empcaring logo.png" alt="EmpCaring" style="height:40px;width:auto;"> <span style="font-family:'Sora',sans-serif;font-weight:700;font-size:var(--text-base);letter-spacing:0.03em;margin-left:2px;" class="brand-text" style="display:inline-flex;align-items:center;" style="vertical-align:middle"><span style="color:#228274;">EMP</span><span style="color:var(--color-text);">CARING</span></span></a>
     <nav class="nav">
       <a href="../index.html" class="nav__link">Home</a><a href="../products.html" class="nav__link">Products</a>
       <div class="nav__dropdown"><span class="nav__dropdown-toggle">Solutions</span>
