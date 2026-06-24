@@ -1,77 +1,93 @@
-# Smart Ring
+# ECG Smart Ring
 
-## Basic Info
-- **Product Name**: K3 Health Monitoring Smart Ring
-- **Slug**: smart-ring
-- **Page Title**: K3 Health Monitoring Smart Ring — 24/7 Vital Tracking | EmpCaring
-- **Meta Description**: K3 health monitoring smart ring — 24/7 heart rate, SpO2, sleep tracking, HRV. 5ATM waterproof, 10-15 day battery. 3 colors, US sizes 6-13. Factory-direct pricing.
+*Based on Official Specification Sheet*
 
-## Hero Section
-- **H1**: K3 Health Monitoring Smart Ring
-- **Hero Text**: 24/7 heart rate, SpO2, body temperature, sleep tracking, and HRV in a discreet ring. 5ATM waterproof, 10-15 day battery, includes charging case. Your residents will forget they're wearing it.
-- **Badges**: 24/7 Health Tracking / 5ATM Waterproof / 3 Colors
+---
+
+## Product Overview
+
+**Smart Ring** — All-in-one health monitor worn on your finger. Tracks heart rate, blood oxygen, blood pressure, steps, exercise, body temperature, and enables remote family care.
+
+**Key Features:** Exercise · Sleep · Heart rate · Blood pressure · Blood oxygen · Remote care · Body temperature
+
+---
 
 ## Specifications
-- **Model**: K3
-- **Material**: 14K gold-plated, 2.9mm thickness
-- **Sensors**: ST LIS2DW12 accelerometer + optical PPG (3918)
-- **Health Metrics**: HR · HRV · SpO2 · Temp · Sleep · Steps · Calories
-- **Battery**: 24mAH · 10–15 days use · 47 days standby
-- **Charging**: Wireless charging case included · ~2h full charge
-- **Water Resistance**: 5 ATM
-- **Connectivity**: Bluetooth 5.1 · GPS
-- **App Support**: iOS 10.0+ · Android 5.0+ · OTA updates
-- **Sizes**: US 6–13 (8 sizes, inner dia. 16.5–22.3mm)
-- **Package**: 8×8×4.3 cm · 73 g · Box + charging case + cable + bubble wrap
-- **Colors**: Black · Silver · Gold
-- **OEM**: Private label & custom packaging available
 
-## Size Guide
-- US 6 — Inner Dia. 16.5mm / Circumference 51.8mm
-- US 7 — Inner Dia. 17.4mm / Circumference 54.7mm
-- US 8 — Inner Dia. 18.2mm / Circumference 57.2mm
-- US 9 — Inner Dia. 19.0mm / Circumference 59.7mm
-- US 10 — Inner Dia. 19.9mm / Circumference 62.5mm
-- US 11 — Inner Dia. 20.7mm / Circumference 65.0mm
-- US 12 — Inner Dia. 21.5mm / Circumference 67.5mm
-- US 13 — Inner Dia. 22.3mm / Circumference 70.1mm
+### Materials & Build
 
-## Features
-- **Continuous heart rate & HRV**: ST LIS2DW12 accelerometer + optical PPG sensor tracks heart rate and heart rate variability around the clock
-- **Sleep & SpO2 monitoring**: Tracks deep sleep, light sleep, REM, and blood oxygen levels throughout the night
-- **5ATM waterproof**: Wear in the shower, pool, or during hand washing — no need to remove
-- **10-15 day battery**: 24mAH battery with wireless charging; full charge in ~2 hours; 47-day standby
+| Item | Details |
+| :--- | :--- |
+| Outer Surface | Stainless steel, electroplating finish (72h salt spray tested) |
+| Main Body | Epoxy resin |
+| Ring Width | 8 mm |
+| Weight | Approx. 5.0 g |
+| Color | Black |
 
-## OEM/ODM Customization
-- **Materials**: Titanium alloy · Ceramic · Stainless steel
-- **Surface Finishes**: Polished · Matte (sandblast) · Brushed
-- **Colors & Branding**: Black · Gold · Silver · Custom colors available
-- Full customization available — your material, finish, color, and packaging
+### Hardware
 
-## Feature Detail Images
-1. **multi-sensor fusion.webp** (1200×2350, ~1:2) — Multi-sensor health monitoring technology
-2. **Deep sleep support.jpg** (790×822, ~1:1) — Sleep tracking and recovery monitoring
-3. **5ATM waterproof design.jpg** (688×573, ~6:5) — Waterproof ring design
+| Component | Specification |
+| :--- | :--- |
+| CPU | JL7073 (A8-1MB) |
+| Storage | Flash 512 kB · RAM 64 kB (daily app sync recommended; stores ~7 days of data) |
+| Heart Rate Sensor | GH3228T + GPSE1602B |
+| ECG Sensor | GH3228T |
+| G-Sensor | BMA510 (Bosch) |
+| LED | Visible color spectrum, safe and user-friendly |
+| Connectivity | Bluetooth Low Energy 5.3 |
+| Software Update | Updateable via APP |
 
-## Why Us
-- **Smart device specialist**: Factory focuses on wearable health devices; 3-year track record with 63% repeat buyers
-- **What you see is what you get**: Every specification from the factory listing and K3 product datasheet; 100% on-time, 100% positive
-- **Direct from our production line**: Your order goes directly to our production team — no middlemen, no delays
+### Battery & Charging
 
-## Factory Data
-- **Platform**: 1688 supplier
-- **Years Active**: 3+ years
-- **Repeat Rate**: 63%
-- **Positive Feedback**: 100%
-- **Distributors**: 100+
-- **Published**: 2025年3月
+| Item | Details |
+| :--- | :--- |
+| Battery Capacity | 15–20 mAh (15 mAh for sizes below No. 9, 20 mAh for No. 10+) |
+| Working Time | 3–5 days with Bluetooth connected (varies by usage) |
+| Charging Time | Approx. 1 hour |
+| Charging Method | Magnetic charging cable (USB 5V) — included standard; charging case optional |
+| Charging Port | Magnetic contacts with short-circuit protection |
 
-## Images
-- **Folder**: assets/images/products/smart ring/
-- ring-hero.webp (800×600, 4:3) — Hero scene shot
-- black.webp (3000×3000, 1:1) — Black product
-- silver.webp (3000×3000, 1:1) — Silver product
-- gold.webp (3000×3000, 1:1) — Gold product
-- multi-sensor fusion.webp (1200×2350) — Sensor technology
-- Deep sleep support.jpg (790×822) — Sleep tracking
-- 5ATM waterproof design.jpg (688×573) — Waterproof design
+### Durability
+
+| Item | Rating |
+| :--- | :--- |
+| Waterproof | 5ATM + IP68 |
+
+### Compatibility
+
+- Android 5.0+
+- iOS 10.0+
+
+---
+
+## Full Feature List
+
+| Function | Description |
+| :--- | :--- |
+| ECG (Electrocardiogram) | Single-lead ECG detection |
+| Heart Rate Monitoring | Real-time heart rate tracking |
+| Blood Oxygen (SpO₂) | Oxygen saturation monitoring |
+| Blood Pressure | 24-hour blood pressure tracking |
+| Skin Temperature | Continuous body surface temperature monitoring |
+| Exercise Modes | Multiple workout modes supported |
+| Sleep Monitoring | Sleep stage tracking |
+| Remote Care | Family data sharing via APP |
+| 5ATM+IP68 Waterproof | Swim-proof, shower-proof, wash-proof |
+
+---
+
+## APP — HealthWear
+
+**Languages Supported (20):**  
+Russian · Hungarian · Turkish · German · Italian · Czech · Slovak · Japanese · French · Polish · Persian · Simplified Chinese · Traditional Chinese · English · Portuguese · Spanish · Vietnamese · Arabic · Korean · Thai
+
+---
+
+## Package Contents
+
+| Item | Qty |
+| :--- | :--- |
+| Smart Ring | × 1 |
+| Magnetic Charging Cable | × 1 |
+| User Manual | × 1 |
+| Packaging Box | × 1 |
