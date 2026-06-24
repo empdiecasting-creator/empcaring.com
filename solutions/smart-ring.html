@@ -19,8 +19,17 @@
   <link rel="icon" href="../assets/images/empcaring logo.png">
   <style>
     @media (max-width: 767px) {
-      .ring-colors { grid-template-columns: 1fr 1fr !important; }
-      .ring-features { grid-template-columns: 1fr !important; }
+      /* Hero */
+      .layout-2col { grid-template-columns: 1fr !important; }
+      .ring-hero-img { max-width: 280px !important; margin: 0 auto var(--space-6) !important; }
+      /* Product gallery — 3-col -> 2-col */
+      .ring-gallery { grid-template-columns: repeat(2, 1fr) !important; gap: var(--space-2) !important; }
+      .ring-gallery-bottom { grid-template-columns: repeat(2, 1fr) !important; gap: var(--space-2) !important; }
+      /* Charger — 3-col -> 2-col */
+      .ring-charger { grid-template-columns: repeat(2, 1fr) !important; gap: var(--space-2) !important; }
+      /* Feature configurator — grid--3 handles 1-col */
+      /* Spacing */
+      .section { padding-block: var(--space-8) !important; }
     }
   </style>
 </head>
@@ -87,7 +96,7 @@
         </div>
         <div style="display:flex;align-items:center;justify-content:flex-end;">
           <div style="width:100%;max-width:400px;border-radius:var(--radius-md);overflow:hidden;">
-            <img src="../assets/images/products/smart ring/ring-hero.jpg" alt="ECG Smart Ring" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:var(--radius-md);">
+            <img class="ring-hero-img" src="../assets/images/products/smart ring/ring-hero.jpg" alt="ECG Smart Ring" style="width:100%;max-width:400px;aspect-ratio:1/1;object-fit:cover;border-radius:var(--radius-md);">
           </div>
         </div>
       </div>
@@ -110,12 +119,12 @@
       <div style="text-align:center;margin-bottom:var(--space-10);" class="reveal">
         <h2 style="font-family:'Sora',sans-serif;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:700;letter-spacing:-0.02em;">Every angle. Every detail.</h2>
       </div>
-      <div class="reveal-stagger" style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4);max-width:720px;margin-inline:auto;margin-bottom:var(--space-4);">
+      <div class="reveal-stagger" class="ring-gallery" style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4);max-width:720px;margin-inline:auto;margin-bottom:var(--space-4);">
         <div style="border-radius:var(--radius-md);overflow:hidden;"><img src="../assets/images/products/smart ring/ring-angle-1.jpg" alt="ECG ring top view" style="width:100%;aspect-ratio:1/1;object-fit:cover;"></div>
         <div style="border-radius:var(--radius-md);overflow:hidden;"><img src="../assets/images/products/smart ring/ring-angle-2.jpg" alt="ECG ring side view" style="width:100%;aspect-ratio:1/1;object-fit:cover;"></div>
         <div style="border-radius:var(--radius-md);overflow:hidden;"><img src="../assets/images/products/smart ring/ring-angle-3.jpg" alt="ECG ring angle view" style="width:100%;aspect-ratio:1/1;object-fit:cover;"></div>
       </div>
-      <div class="reveal-stagger" style="display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-4);max-width:480px;margin-inline:auto;">
+      <div class="reveal-stagger" class="ring-gallery-bottom" style="display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-4);max-width:480px;margin-inline:auto;">
         <div style="border-radius:var(--radius-md);overflow:hidden;"><img src="../assets/images/products/smart ring/ring-angle-4.jpg" alt="ECG ring detail" style="width:100%;aspect-ratio:1/1;object-fit:cover;"></div>
         <div style="border-radius:var(--radius-md);overflow:hidden;"><img src="../assets/images/products/smart ring/ring-angle-5.jpg" alt="ECG ring close-up" style="width:100%;aspect-ratio:1/1;object-fit:cover;"></div>
       </div>
@@ -128,7 +137,7 @@
       <div style="text-align:center;margin-bottom:var(--space-10);" class="reveal">
         <h2 style="font-family:'Sora',sans-serif;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:700;letter-spacing:-0.02em;">Charging Case <span style="color:var(--color-text-muted);font-weight:400;font-size:var(--text-sm);">(optional)</span></h2>
       </div>
-      <div class="reveal-stagger" style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4);max-width:720px;margin-inline:auto;">
+      <div class="reveal-stagger" class="ring-charger" style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4);max-width:720px;margin-inline:auto;">
         <div style="border-radius:var(--radius-md);overflow:hidden;"><img src="../assets/images/products/smart ring/ring-charger-1.png" alt="Charging case" style="width:100%;aspect-ratio:1/1;object-fit:cover;"></div>
         <div style="border-radius:var(--radius-md);overflow:hidden;"><img src="../assets/images/products/smart ring/ring-charger-2.png" alt="Charging case open" style="width:100%;aspect-ratio:1/1;object-fit:cover;"></div>
         <div style="border-radius:var(--radius-md);overflow:hidden;"><img src="../assets/images/products/smart ring/ring-charger-3.png" alt="Charging case full set" style="width:100%;aspect-ratio:1/1;object-fit:cover;"></div>
