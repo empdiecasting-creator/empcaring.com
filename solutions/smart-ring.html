@@ -19,6 +19,8 @@
   <link rel="icon" href="../assets/images/empcaring logo.png">
   <style>
     @media (max-width: 767px) {
+      /* Brand name hide on mobile */
+      .brand-text { display: none; }
       /* Hero */
       .layout-2col { grid-template-columns: 1fr !important; }
       .ring-hero-img { max-width: 280px !important; margin: 0 auto var(--space-6) !important; }
@@ -27,7 +29,6 @@
       .ring-gallery-bottom { grid-template-columns: repeat(2, 1fr) !important; gap: var(--space-2) !important; }
       /* Charger — 3-col -> 2-col */
       .ring-charger { grid-template-columns: repeat(2, 1fr) !important; gap: var(--space-2) !important; }
-      /* Feature configurator — grid--3 handles 1-col */
       /* Spacing */
       .section { padding-block: var(--space-8) !important; }
     }
@@ -39,7 +40,7 @@
 <header class="site-header" role="banner">
   <div class="site-header__inner">
     <a href="../index.html" class="site-logo" aria-label="EmpCaring Home">
-      <img src="../assets/images/empcaring logo.png" alt="EmpCaring" style="height:40px;width:auto;">
+      <img src="../assets/images/empcaring logo.png" alt="EmpCaring" style="height:40px;width:auto;"> <span style="font-family:'Sora',sans-serif;font-weight:700;font-size:var(--text-lg);color:var(--color-text);margin-left:var(--space-2);"class="brand-text">EMPCARING</span>
     </a>
     <nav class="nav" role="navigation" aria-label="Main navigation">
       <a href="../index.html" class="nav__link">Home</a><a href="../products.html" class="nav__link">Products</a>
