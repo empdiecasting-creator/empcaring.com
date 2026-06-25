@@ -127,8 +127,8 @@
 }
 
 .product-card__image {
-  aspect-ratio: 4 / 3;
-  background: var(--color-surface-alt);
+  aspect-ratio: 1 / 1;
+  background: var(--color-surface);
   overflow: hidden;
 }
 
