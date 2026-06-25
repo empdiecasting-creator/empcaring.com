@@ -52,9 +52,8 @@
     padding: var(--space-20) var(--space-12);
   }
 
-  /* Product card image: taller on larger screens */
   .product-card__image {
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 1 / 1;
   }
 }
 
@@ -113,9 +112,8 @@
     padding-block: var(--section-y);
   }
 
-  /* Product cards: larger images */
   .product-card__image {
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 1 / 1;
   }
 
   /* Blog hero bigger */
