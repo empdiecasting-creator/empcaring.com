@@ -91,3 +91,36 @@ Russian · Hungarian · Turkish · German · Italian · Czech · Slovak · Japan
 | Magnetic Charging Cable | × 1 |
 | User Manual | × 1 |
 | Packaging Box | × 1 |
+
+---
+
+## Certifications
+
+- CE
+- ROHS
+- FCC
+
+---
+
+## OEM Customization Options
+
+- Laser engraving logo
+- Inner ring silk printing
+- Custom packaging design
+- APP branding (HealthWear)
+
+---
+
+## Size Chart
+
+| US Code | Inner Diameter | Circumference | Weight Reference |
+| :--- | :--- | :--- | :--- |
+| 7 | 17.3 mm | 52–54 mm | 45–50 kg |
+| 8 | 18.1 mm | 55–57 mm | 55–60 kg |
+| 9 | 18.9 mm | 58–60 mm | 65–70 kg |
+| 10 | 19.8 mm | 61–62 mm | 70–75 kg |
+| 11 | 20.6 mm | 63–65 mm | 75–80 kg |
+| 12 | 21.4 mm | 66–67 mm | 85–90 kg |
+| 13 | 22.2 mm | 68–70 mm | 95–100 kg |
+
+*Data is for reference only. Actual measurements should be taken as the standard.*
