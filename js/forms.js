@@ -110,6 +110,10 @@
       successEl.classList.add('form-success--visible');
       successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
+    // GA4 conversion event — fires even if ga.js hasn't loaded yet (dataLayer queue)
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('event', 'generate_lead', { event_category: 'inquiry', event_label: 'contact_form' });
     window.history.replaceState({}, '', window.location.pathname);
   }
 })();
