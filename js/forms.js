@@ -103,6 +103,13 @@
      ========================================================== */
 
 
+  // Fire GA4 conversion on submit — fires before navigation, captured by Debug View
+  form.addEventListener('submit', function () {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('event', 'generate_lead', { event_category: 'inquiry', event_label: 'contact_form' });
+  });
+
   // Show success message if redirected back from Cloudflare Function
   if (window.location.search.includes('success=1')) {
     var successEl = document.querySelector('.form-success');
@@ -110,10 +117,6 @@
       successEl.classList.add('form-success--visible');
       successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
-    // GA4 conversion event — fires even if ga.js hasn't loaded yet (dataLayer queue)
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('event', 'generate_lead', { event_category: 'inquiry', event_label: 'contact_form' });
     window.history.replaceState({}, '', window.location.pathname);
   }
 })();
