@@ -110,10 +110,9 @@
       successEl.classList.add('form-success--visible');
       successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
-    // GA4 conversion — only fires on confirmed successful submission from server
+    // GA4 conversion — push directly to dataLayer (most reliable cross-browser)
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('event', 'generate_lead', { event_category: 'inquiry', event_label: 'contact_form' });
+    window.dataLayer.push({ event: 'generate_lead' });
     window.history.replaceState({}, '', window.location.pathname);
   }
 })();
