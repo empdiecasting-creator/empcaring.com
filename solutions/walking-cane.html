@@ -20,6 +20,16 @@
   <link rel="stylesheet" href="../css/footer.css">
   <link rel="icon" href="../assets/images/empcaring logo.png">
 
+  <style>
+    @media (max-width: 767px) {
+      .cane-colors { grid-template-columns: repeat(2, 1fr) !important; }
+      .cane-details { grid-template-columns: repeat(2, 1fr) !important; }
+      .cane-features { grid-template-columns: 1fr !important; }
+      .cane-why { grid-template-columns: 1fr !important; }
+      .cane-production { grid-template-columns: 1fr !important; }
+    }
+  </style>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -122,7 +132,7 @@
         <p style="color:var(--color-text-muted);max-width:480px;margin-inline:auto;line-height:1.6;">Every color is built on the same thickened aluminum frame. Pick the finish that matches your customer base.</p>
       </div>
 
-      <div class="reveal-stagger" style="display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-4);max-width:900px;margin-inline:auto;">
+      <div class="reveal-stagger cane-colors" style="display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-4);max-width:900px;margin-inline:auto;">
         <!-- Black -->
         <div style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--color-border);background:var(--color-surface);">
           <img src="../assets/images/products/cane/cane-black.jpg" alt="Black quad walking cane" style="width:100%;aspect-ratio:3/4;object-fit:cover;">
@@ -165,7 +175,7 @@
       <div style="text-align:center;margin-bottom:var(--space-12);" class="reveal">
         <h2 style="font-family:'Sora',sans-serif;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:700;letter-spacing:-0.02em;margin-bottom:var(--space-3);">Why this cane</h2>
       </div>
-      <div class="grid grid--2 grid--gap-lg reveal-stagger" style="max-width:760px;margin-inline:auto;">
+      <div class="grid grid--2 grid--gap-lg reveal-stagger cane-features" style="max-width:760px;margin-inline:auto;">
         <div style="display:flex;gap:var(--space-4);align-items:flex-start;">
           <i class="ph ph-crosshair-simple" style="font-size:1.5rem;color:var(--color-primary);flex-shrink:0;margin-top:2px;"></i>
           <div><strong>4-Leg stable base</strong><p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-top:var(--space-1);">Four widely-spaced rubber feet distribute weight evenly. Stands upright on its own — no need to lean it against a wall.</p></div>
@@ -192,7 +202,7 @@
       <div style="text-align:center;margin-bottom:var(--space-10);" class="reveal">
         <h2 style="font-family:'Sora',sans-serif;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:700;letter-spacing:-0.02em;margin-bottom:var(--space-3);">Built with care, down to the details</h2>
       </div>
-      <div class="grid grid--3 grid--gap-lg reveal-stagger" style="max-width:900px;margin-inline:auto;">
+      <div class="grid grid--3 grid--gap-lg reveal-stagger cane-details" style="max-width:900px;margin-inline:auto;">
         <div style="border-radius:var(--radius-md);overflow:hidden;">
           <img src="../assets/images/products/cane/cane-detail.jpg" alt="T-handle grip texture close-up" style="width:100%;aspect-ratio:3/4;object-fit:cover;">
         </div>
@@ -269,7 +279,7 @@
       <div style="text-align:center;margin-bottom:var(--space-12);" class="reveal">
         <h2 style="font-family:'Sora',sans-serif;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:700;letter-spacing:-0.02em;margin-bottom:var(--space-3);">Why source this cane through us</h2>
       </div>
-      <div class="grid grid--3 grid--gap-lg reveal-stagger">
+      <div class="grid grid--3 grid--gap-lg reveal-stagger cane-why">
         <div class="feature-item">
           <div class="feature-item__icon"><i class="ph ph-storefront"></i></div>
           <h3 class="feature-item__title">Verified supplier</h3>
@@ -311,7 +321,7 @@
         <h2 style="font-family:'Sora',sans-serif;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:700;letter-spacing:-0.02em;">From our production floor</h2>
         <p style="color:var(--color-text-muted);margin-top:var(--space-2);">Every cane is assembled, inspected, and packed in our own workshop.</p>
       </div>
-      <div class="reveal-stagger" style="display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-4);max-width:720px;margin-inline:auto;">
+      <div class="reveal-stagger cane-production" style="display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-4);max-width:720px;margin-inline:auto;">
         <div style="border-radius:var(--radius-md);overflow:hidden;"><img src="../assets/images/products/cane/cane production.webp" alt="Walking cane production workshop" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;"></div>
         <div style="border-radius:var(--radius-md);overflow:hidden;"><img src="../assets/images/products/cane/cane production2.webp" alt="Walking cane assembly line" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;"></div>
         <div style="border-radius:var(--radius-md);overflow:hidden;"><img src="../assets/images/products/cane/cane production3.webp" alt="Walking cane quality inspection" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;"></div>
