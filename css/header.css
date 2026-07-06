@@ -21,7 +21,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 64px;
+  height: 64px;
   max-width: var(--container-max);
   margin-inline: auto;
   padding-inline: var(--container-padding);
@@ -47,7 +47,7 @@
 
 @media (max-width: 767px) {
   .site-logo img {
-    height: 64px !important;
+    height: 40px !important;
   }
 }
 
