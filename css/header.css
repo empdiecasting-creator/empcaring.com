@@ -45,6 +45,12 @@
   width: auto;
 }
 
+@media (max-width: 767px) {
+  .site-logo img {
+    height: 48px !important;
+  }
+}
+
 .site-logo:hover {
   color: var(--color-text);
 }
