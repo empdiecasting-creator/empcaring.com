@@ -180,3 +180,10 @@ kbd {
 .skip-to-content:focus {
   top: var(--space-4);
 }
+
+/* Mobile: reduce hero min-height so background image isn't over-cropped */
+@media (max-width: 767px) {
+  section[style*="aspect-ratio"] {
+    min-height: 280px !important;
+  }
+}
