@@ -180,3 +180,10 @@ kbd {
 .skip-to-content:focus {
   top: var(--space-4);
 }
+
+/* Mobile: shorter hero for smaller screens */
+@media (max-width: 767px) {
+  section[style*="min-height:70vh"] {
+    min-height: 55vh !important;
+  }
+}
