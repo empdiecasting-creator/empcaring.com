@@ -47,7 +47,8 @@
 
 @media (max-width: 767px) {
   .site-logo img {
-    height: 40px !important;
+    width: 120px !important;
+    height: auto !important;
   }
 }
 
