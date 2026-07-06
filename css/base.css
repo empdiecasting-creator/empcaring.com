@@ -183,7 +183,7 @@ kbd {
 
 /* Mobile: shorter hero for smaller screens */
 @media (max-width: 767px) {
-  section[style*="min-height:70vh"] {
+  section[style*="min-height:80vh"] {
     min-height: 55vh !important;
   }
 }
