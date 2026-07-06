@@ -102,6 +102,13 @@
      Form Submission — Cloudflare Function
      ========================================================== */
 
+  // Fire on submit — catches "close page immediately after submit" scenario
+  form.addEventListener('submit', function () {
+    if (sessionStorage.getItem('lead_sent')) return;
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'generate_lead' });
+    sessionStorage.setItem('lead_sent', '1');
+  });
 
   // Show success message & fire GA4 conversion if redirected back from server
   if (window.location.search.includes('success=1')) {
@@ -110,9 +117,12 @@
       successEl.classList.add('form-success--visible');
       successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
-    // GA4 conversion — push directly to dataLayer (most reliable cross-browser)
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ event: 'generate_lead' });
+    // Fire conversion (deduped by sessionStorage — only fires if submit missed it)
+    if (!sessionStorage.getItem('lead_sent')) {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'generate_lead' });
+    }
+    sessionStorage.removeItem('lead_sent');
     window.history.replaceState({}, '', window.location.pathname);
   }
 })();
