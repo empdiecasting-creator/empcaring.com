@@ -106,15 +106,11 @@
   if (window.location.search.includes('success=1')) {
     var successEl = document.querySelector('.form-success');
     if (successEl) {
-      // Fire GA4 when success message is shown
-      successEl.addEventListener('transitionend', function handler() {
-        successEl.removeEventListener('transitionend', handler);
-        gtag('event', 'generate_lead');
-        console.log('GA4 generate_lead fired', window.dataLayer);
-      });
       successEl.classList.add('form-success--visible');
       successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
     window.history.replaceState({}, '', window.location.pathname);
+    // GA4 conversion — fires after DOM settles
+    gtag('event', 'generate_lead');
   }
 })();
