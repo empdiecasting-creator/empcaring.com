@@ -116,8 +116,21 @@
             </div>
 
             <div class="form-group">
+              <label for="product_interest" class="form-label form-label--required">Product Interest</label>
+              <select id="product_interest" name="product_interest" class="form-input" required style="appearance:auto;">
+                <option value="">Select a product</option>
+                <option value="cane">Walking Cane</option>
+                <option value="grab-bars">Grab Bars</option>
+                <option value="transfer-device">Transfer Chair</option>
+                <option value="smart-ring">ECG Smart Ring</option>
+                <option value="multiple">Multiple Products</option>
+                <option value="other">Other / General Inquiry</option>
+              </select>
+            </div>
+
+            <div class="form-group">
               <label for="message" class="form-label form-label--required">Message</label>
-              <textarea id="message" name="message" class="form-textarea" required placeholder="Tell us about your facility, the products you are interested in, and any specific questions."></textarea>
+              <textarea id="message" name="message" class="form-textarea" required placeholder="Tell us about your facility, quantities needed, and any specific questions."></textarea>
             </div>
 
             <div class="cf-turnstile" data-sitekey="0x4AAAAAADjIYR20aAJ56H3w" style="margin-bottom:var(--space-4);" data-theme="light"></div>
