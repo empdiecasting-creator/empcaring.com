@@ -106,11 +106,11 @@
   if (window.location.search.includes('success=1')) {
     var successEl = document.querySelector('.form-success');
     if (successEl) {
-      // Fire GA4 when success animation starts — tied to visible "Inquiry sent!"
+      // Fire GA4 when success message is shown
       successEl.addEventListener('transitionend', function handler() {
         successEl.removeEventListener('transitionend', handler);
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({ event: 'generate_lead' });
+        gtag('event', 'generate_lead');
+        console.log('GA4 generate_lead fired', window.dataLayer);
       });
       successEl.classList.add('form-success--visible');
       successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
