@@ -102,10 +102,17 @@
      Form Submission — Cloudflare Function
      ========================================================== */
 
-  // Fire GA4 conversion on submit — uses window.gtag (always available synchronously)
+  // GA4 helper — works even if ga.js hasn't loaded yet
+  function fireLeadEvent() {
+    window.dataLayer = window.dataLayer || [];
+    var gtag = window.gtag || function(){window.dataLayer.push(arguments);};
+    gtag('event', 'generate_lead');
+  }
+
+  // Fire GA4 conversion on submit
   form.addEventListener('submit', function () {
     if (sessionStorage.getItem('lead_sent')) return;
-    window.gtag('event', 'generate_lead');
+    fireLeadEvent();
     sessionStorage.setItem('lead_sent', '1');
   });
 
@@ -118,7 +125,7 @@
     }
     // Backup: fire if submit handler missed it (deduped by sessionStorage)
     if (!sessionStorage.getItem('lead_sent')) {
-      window.gtag('event', 'generate_lead');
+      fireLeadEvent();
     }
     sessionStorage.removeItem('lead_sent');
     window.history.replaceState({}, '', window.location.pathname);
