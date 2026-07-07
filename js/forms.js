@@ -102,20 +102,6 @@
      Form Submission — Cloudflare Function
      ========================================================== */
 
-  // GA4 helper — works even if ga.js hasn't loaded yet
-  function fireLeadEvent() {
-    window.dataLayer = window.dataLayer || [];
-    var gtag = window.gtag || function(){window.dataLayer.push(arguments);};
-    gtag('event', 'generate_lead');
-  }
-
-  // Fire GA4 conversion on submit
-  form.addEventListener('submit', function () {
-    if (sessionStorage.getItem('lead_sent')) return;
-    fireLeadEvent();
-    sessionStorage.setItem('lead_sent', '1');
-  });
-
   // Show success message if redirected back from server
   if (window.location.search.includes('success=1')) {
     var successEl = document.querySelector('.form-success');
@@ -123,11 +109,10 @@
       successEl.classList.add('form-success--visible');
       successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
-    // Backup: fire if submit handler missed it (deduped by sessionStorage)
-    if (!sessionStorage.getItem('lead_sent')) {
-      fireLeadEvent();
-    }
-    sessionStorage.removeItem('lead_sent');
+    // GA4 conversion event
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('event', 'generate_lead');
     window.history.replaceState({}, '', window.location.pathname);
   }
 })();
