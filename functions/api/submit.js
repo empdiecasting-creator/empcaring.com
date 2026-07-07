@@ -19,7 +19,17 @@ export async function onRequestPost({ request, env }) {
   const name = formData.get('name') || '';
   const email = formData.get('email') || '';
   const company = formData.get('company') || '';
+  const productInterest = formData.get('product_interest') || '';
   const message = formData.get('message') || '';
+
+  const productLabels = {
+    'cane': 'Walking Cane',
+    'grab-bars': 'Grab Bars',
+    'transfer-device': 'Transfer Chair',
+    'smart-ring': 'ECG Smart Ring',
+    'multiple': 'Multiple Products',
+    'other': 'Other / General Inquiry'
+  };
 
   // Basic validation
   if (!name || !email || !message) {
@@ -60,7 +70,8 @@ export async function onRequestPost({ request, env }) {
           <h2>New Contact Form Inquiry</h2>
           <p><strong>Name:</strong> ${esc(name)}</p>
           <p><strong>Email:</strong> ${esc(email)}</p>
-          <p><strong>Company:</strong> ${esc(company || '—')}</p>
+          <p><strong>Company:</strong> ${esc(company || '-')}</p>
+          <p><strong>Product Interest:</strong> ${esc(productLabels[productInterest] || productInterest || '-')}</p>
           <p><strong>Message:</strong></p>
           <p>${esc(message).replace(/\n/g, '<br>')}</p>
         `,
