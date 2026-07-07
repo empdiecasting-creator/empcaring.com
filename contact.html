@@ -26,7 +26,14 @@
     "description": "Contact EMPCaring for volume pricing, product samples, and procurement inquiries. Serving nursing homes, hospitals, and assisted living facilities worldwide."
   }
   </script>
-  <script src="js/ga.js" async></script>
+  <!-- GA4 — inline for reliable event tracking -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WCJEF00XZ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WCJEF00XZ0');
+  </script>
   <link rel="canonical" href="https://empcaring.com/contact">
 </head>
 <body>
