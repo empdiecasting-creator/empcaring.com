@@ -102,25 +102,23 @@
      Form Submission — Cloudflare Function
      ========================================================== */
 
-  // Fire on submit — catches "close page immediately after submit" scenario
+  // Fire GA4 conversion on submit — uses window.gtag (always available synchronously)
   form.addEventListener('submit', function () {
     if (sessionStorage.getItem('lead_sent')) return;
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ event: 'generate_lead' });
+    window.gtag('event', 'generate_lead');
     sessionStorage.setItem('lead_sent', '1');
   });
 
-  // Show success message & fire GA4 conversion if redirected back from server
+  // Show success message if redirected back from server
   if (window.location.search.includes('success=1')) {
     var successEl = document.querySelector('.form-success');
     if (successEl) {
       successEl.classList.add('form-success--visible');
       successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
-    // Fire conversion (deduped by sessionStorage — only fires if submit missed it)
+    // Backup: fire if submit handler missed it (deduped by sessionStorage)
     if (!sessionStorage.getItem('lead_sent')) {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: 'generate_lead' });
+      window.gtag('event', 'generate_lead');
     }
     sessionStorage.removeItem('lead_sent');
     window.history.replaceState({}, '', window.location.pathname);
