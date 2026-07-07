@@ -109,10 +109,9 @@
       successEl.classList.add('form-success--visible');
       successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
-    // GA4 conversion event
+    // GA4 conversion event — exact pattern confirmed working
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('event', 'generate_lead');
+    window.dataLayer.push({ event: 'generate_lead' });
     window.history.replaceState({}, '', window.location.pathname);
   }
 })();
