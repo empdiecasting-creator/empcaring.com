@@ -232,4 +232,31 @@
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
+
+  /* ==========================================================
+     Cookie Consent Banner
+     ========================================================== */
+
+  if (!localStorage.getItem('cookie-consent')) {
+    var cookieBanner = document.createElement('div');
+    cookieBanner.id = 'cookie-banner';
+    var pp = '/privacy-policy';
+    // Use relative path for pages in subdirectories
+    if (window.location.pathname.includes('/blog/') || window.location.pathname.includes('/solutions/')) {
+      pp = '..' + pp;
+    }
+    cookieBanner.innerHTML =
+      '<div class="cookie-banner__inner">' +
+      '<p class="cookie-banner__text">This site uses analytics cookies to understand how visitors find and use our content. By continuing, you agree to our <a href="' + pp + '">privacy policy</a>.</p>' +
+      '<button class="cookie-banner__btn" id="cookie-accept">Accept</button>' +
+      '</div>';
+    document.body.appendChild(cookieBanner);
+
+    var acceptBtn = document.getElementById('cookie-accept');
+    acceptBtn.addEventListener('click', function () {
+      localStorage.setItem('cookie-consent', 'accepted');
+      cookieBanner.classList.add('cookie-banner--hidden');
+      setTimeout(function () { cookieBanner.remove(); }, 300);
+    });
+  }
 })();
