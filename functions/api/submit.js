@@ -45,7 +45,7 @@ export async function onRequestPost({ request, env }) {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      secret: env.TURNSTILE_SECRET_KEY || '',
+      secret: env.TURNSTILE_SECRET_KEY || '0x4AAAAAADjIYZQrKhjwtsfNLz-5ZdJu1rk',
       response: token,
     }),
   });
