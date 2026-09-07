@@ -39,6 +39,7 @@ export async function onRequestPost({ request, env }) {
   // ── Turnstile verification ──
   const token = formData.get('cf-turnstile-response');
   if (!token) {
+    console.log('[submit] rejected: no turnstile token');
     return Response.redirect(`${new URL(request.url).origin}/contact?success=1`, 302);
   }
   const verify = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
@@ -51,7 +52,14 @@ export async function onRequestPost({ request, env }) {
   });
   const outcome = await verify.json();
   if (!outcome.success) {
+    console.log('[submit] turnstile verification failed:', JSON.stringify(outcome));
     return Response.redirect(`${new URL(request.url).origin}/contact?success=1`, 302);
+  }
+
+  // ── Guard: RESEND_API_KEY must be set ──
+  if (!env.RESEND_API_KEY) {
+    console.error('[submit] RESEND_API_KEY is not set in environment variables');
+    return Response.redirect(`${new URL(request.url).origin}/contact?success=0`, 302);
   }
 
   try {
@@ -78,10 +86,18 @@ export async function onRequestPost({ request, env }) {
       }),
     });
 
+    const resBody = await res.text();
+    if (!res.ok) {
+      console.error(`[submit] Resend API failed (status ${res.status}):`, resBody);
+    } else {
+      console.log('[submit] Resend email sent successfully:', resBody);
+    }
+
     return Response.redirect(
       `${new URL(request.url).origin}/contact?success=${res.ok ? 1 : 0}`, 302
     );
   } catch (err) {
+    console.error('[submit] exception during Resend send:', err);
     return Response.redirect(`${new URL(request.url).origin}/contact?success=0`, 302);
   }
 }
