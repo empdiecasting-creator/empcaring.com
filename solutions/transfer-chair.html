@@ -35,6 +35,12 @@
       /* Accessories: stack image+text vertically on mobile */
       .tc-accessories > div > div[style*="flex:1"] { flex-direction:column !important; text-align:center !important; gap:var(--space-3) !important; }
       .tc-accessories > div > div[style*="flex:1"] > div[style*="flex-shrink"] { display:flex !important; justify-content:center !important; }
+      /* Hero products: uniform cards, no offset, fit 3 across on small screens */
+      .tc-hero-products > div { flex-wrap:nowrap !important; justify-content:center !important; }
+      .tc-hero-products > div > div { min-width:0 !important; max-width:110px !important; margin-bottom:0 !important; padding:var(--space-2) !important; }
+      .tc-hero-products img { height:110px !important; }
+      .tc-hero-products img[alt*="Hydraulic"] { height:110px !important; margin-bottom:0 !important; }
+      .tc-hero-products > div > div span { font-size:10px !important; }
     }
     @media (max-width: 1024px) and (min-width: 768px) {
       .tc-hero-products { max-width:100% !important; }
