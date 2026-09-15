@@ -25,7 +25,7 @@ export async function onRequestPost({ request, env }) {
   const productLabels = {
     'cane': 'Walking Cane',
     'grab-bars': 'Grab Bars',
-    'transfer-device': 'Transfer Chair',
+    'transfer-chair': 'Transfer Chair',
     'smart-ring': 'ECG Smart Ring',
     'multiple': 'Multiple Products',
     'other': 'Other / General Inquiry'
