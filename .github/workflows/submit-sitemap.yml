@@ -1,0 +1,35 @@
+name: Submit Sitemap
+
+# Triggers when sitemap or blog content changes on master
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'sitemap.xml'
+      - 'blog/**'
+      - '.github/workflows/submit-sitemap.yml'
+  workflow_dispatch:
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Wait for Cloudflare Pages deployment
+        run: sleep 120
+
+      - name: Ping Bing / idxnow with updated sitemap
+        run: |
+          echo "Submitting sitemap to Bing Webmaster Tools..."
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" "https://www.bing.com/ping?sitemap=https://empcaring.com/sitemap.xml")
+          echo "Bing ping response: HTTP $STATUS"
+
+      - name: Verify sitemap is reachable
+        run: |
+          echo "Verifying sitemap is publicly accessible..."
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" "https://empcaring.com/sitemap.xml")
+          echo "Sitemap status: HTTP $STATUS"
+          if [ "$STATUS" != "200" ]; then
+            echo "::warning::Sitemap not reachable (HTTP $STATUS). Cloudflare deployment may still be in progress."
+          fi
