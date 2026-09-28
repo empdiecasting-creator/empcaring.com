@@ -501,7 +501,9 @@
 }
 
 .blog-card__image {
-  display: none;
+  aspect-ratio: 16 / 9;
+  background: var(--color-surface-alt);
+  overflow: hidden;
 }
 
 .blog-card__image img {
