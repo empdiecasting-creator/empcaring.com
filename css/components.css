@@ -500,23 +500,6 @@
   box-shadow: var(--shadow-card-hover);
 }
 
-.blog-card__image {
-  aspect-ratio: 16 / 9;
-  background: var(--color-surface-alt);
-  overflow: hidden;
-}
-
-.blog-card__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform var(--transition-slow);
-}
-
-.blog-card:hover .blog-card__image img {
-  transform: scale(1.03);
-}
-
 .blog-card__body {
   padding: var(--space-6);
 }
