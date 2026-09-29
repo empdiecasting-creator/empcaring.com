@@ -1,5 +1,6 @@
-/solutions/smart-cane /solutions/transfer-chair 301
-/solutions/walking-cane /solutions/transfer-chair 301
-/solutions/grab-bars /solutions/transfer-chair 301
-/solutions/smart-ring /solutions/transfer-chair 301
-/solutions/transfer-device /solutions/transfer-chair 301
+/solutions/smart-cane /solutions/patient-lift 301
+/solutions/walking-cane /solutions/patient-lift 301
+/solutions/grab-bars /solutions/patient-lift 301
+/solutions/smart-ring /solutions/patient-lift 301
+/solutions/transfer-device /solutions/patient-lift 301
+/solutions/transfer-chair /solutions/patient-lift 301
