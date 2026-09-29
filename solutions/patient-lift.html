@@ -28,26 +28,11 @@
       .tc-spec-table { font-size: var(--text-xs) !important; }
       .tc-spec-table th, .tc-spec-table td { padding: var(--space-2) var(--space-2) !important; }
       .tc-features { grid-template-columns: 1fr !important; }
-      .tc-hero-products { width:100% !important; max-width:100% !important; }
-      .tc-hero-products > div { flex-wrap:wrap !important; gap:var(--space-2) !important; }
-      .tc-hero-products img { height:120px !important; }
-      .tc-hero-products img[alt*="Hydraulic"] { height:140px !important; margin-bottom:0 !important; }
       /* Accessories: stack image+text vertically on mobile */
       .tc-accessories > div > div[style*="flex:1"] { flex-direction:column !important; text-align:center !important; gap:var(--space-3) !important; }
       .tc-accessories > div > div[style*="flex:1"] > div[style*="flex-shrink"] { display:flex !important; justify-content:center !important; }
-      /* Hero products: uniform cards, no offset, fit 3 across on small screens */
-      .tc-hero-products > div { flex-wrap:nowrap !important; justify-content:center !important; }
-      .tc-hero-products > div > div { min-width:0 !important; max-width:110px !important; margin-bottom:0 !important; padding:var(--space-2) !important; }
-      .tc-hero-products img { height:110px !important; }
-      .tc-hero-products img[alt*="Hydraulic"] { height:110px !important; margin-bottom:0 !important; }
-      .tc-hero-products > div > div span { font-size:10px !important; }
-      .tc-hero-products { margin-bottom:var(--space-8) !important; }
-    }
-    @media (max-width: 1024px) and (min-width: 768px) {
-      .tc-hero-products { max-width:100% !important; }
-      .tc-hero-products > div { gap:var(--space-2) !important; }
-      .tc-hero-products img { height:160px !important; }
-      .tc-hero-products img[alt*="Hydraulic"] { height:190px !important; }
+      /* Hero: taller on mobile, keep the scene subject visible */
+      .pl-hero { min-height: 72vh !important; background-position: 62% center !important; }
     }
   </style>
 
@@ -107,7 +92,7 @@
   </div>
 
   <!-- ═══ HERO ═══ -->
-  <section style="position:relative;overflow:hidden;min-height:60vh;display:flex;align-items:center;background:url('../assets/images/patient-lift-hero.jpg') center/cover no-repeat;">
+  <section class="pl-hero" style="position:relative;overflow:hidden;min-height:60vh;display:flex;align-items:center;background:url('../assets/images/patient-lift-hero.jpg') center/cover no-repeat;">
     <div style="position:absolute;inset:0;background:rgba(16,38,31,0.8);pointer-events:none;"></div>
     <div class="container" style="position:relative;z-index:2;">
       <div style="max-width:560px;">
