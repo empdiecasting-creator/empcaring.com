@@ -151,6 +151,23 @@
   background: var(--color-surface-alt);
 }
 
+/* ---- Header Email ---- */
+.header-email {
+  display: none;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color var(--transition-fast);
+}
+
+.header-email:hover {
+  color: var(--color-primary);
+}
+
 /* ---- Header CTA ---- */
 .header-cta {
   display: none;
@@ -391,6 +408,10 @@
   }
 
   .nav {
+    display: flex;
+  }
+
+  .header-email {
     display: flex;
   }
 
