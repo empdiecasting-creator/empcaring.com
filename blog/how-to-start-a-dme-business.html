@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A practical startup guide for new DME suppliers: licensing and Medicare enrollment sequence, starter product mix, manufacturer vs distributor sourcing, landed-cost math for imported patient lifts, and OEM options.">
+
+  <title>How to Start a DME Business: The Equipment Sourcing Guide | EMPCaring</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/blog.css">
+  <link rel="icon" href="../assets/images/logo150x150.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How to Start a DME Business: The Equipment Sourcing Guide",
+    "description": "A practical startup guide for new DME suppliers: licensing and Medicare enrollment sequence, starter product mix, manufacturer vs distributor sourcing, landed-cost math for imported patient lifts, and OEM options.",
+    "datePublished": "2026-10-21"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Do I need Medicare enrollment to start selling DME?","acceptedAnswer":{"@type":"Answer","text":"No — not to start. You can sell to cash-pay families, assisted living communities, and home health agencies without Medicare involvement. Part B DMEPOS enrollment is only required once you want to bill Medicare directly. Because approval runs in weeks to months, a common path is to start cash-pay and complete enrollment in parallel."}},
+      {"@type":"Question","name":"What licenses does a DME business need?","acceptedAnswer":{"@type":"Answer","text":"The baseline is an NPI number, a state DME license or permit where your state requires one (requirements vary widely, so check your state health department), and — if you will bill Medicare — enrollment as a Part B supplier that meets the Supplier Standards, including a surety bond. Add a resale certificate and local business registration where applicable."}},
+      {"@type":"Question","name":"What is a realistic MOQ when importing patient lifts?","acceptedAnswer":{"@type":"Answer","text":"For factory-direct orders, one full container is the normal starting point. Our own MOQ, for example, is a single 20ft container, mixed across lift and transfer chair models, with a standard lead time of around 35 days. If a container is too much for year one, a US distributor who holds stock is the more realistic entry point."}},
+      {"@type":"Question","name":"Should I buy from a manufacturer or a distributor first?","acceptedAnswer":{"@type":"Answer","text":"If you have warehouse space and container-scale capital, manufacturer-direct gives the best unit economics and OEM control. If you are testing demand with a handful of units, a distributor's small-order access and local stock usually beat the factory price advantage. Many suppliers end up doing both: distributor stock for fast fill-in, factory-direct for volume."}},
+      {"@type":"Question","name":"What documents do I need from an overseas manufacturer?","acceptedAnswer":{"@type":"Answer","text":"Six items: the FDA Establishment Registration Number, the Device Listing Number for the specific model, an English IFU, test reports covering static load, fatigue, and stability, US Agent contact details, and written warranty and spare-parts terms. A real manufacturer produces this pack within days; a reseller typically cannot."}}
+    ]
+  }
+  </script>
+  <script src="../js/ga.js" async></script>
+  <link rel="canonical" href="https://empcaring.com/blog/how-to-start-a-dme-business">
+</head>
+<body>
+
+<a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+<header class="site-header" role="banner">
+  <div class="site-header__inner">
+    <a href="../index.html" class="site-logo" aria-label="EMPCaring Home"><img loading="lazy" src="../assets/images/logo 500x200.png" alt="EMPCaring" style="width:150px;height:auto;"></a>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <a href="../index.html" class="nav__link">Home</a><a href="../products.html" class="nav__link">Products</a>
+      <a href="../blog.html" class="nav__link nav__link--active">Blog</a><a href="../about.html" class="nav__link">About</a><a href="../contact.html" class="nav__link">Contact</a>
+    </nav>
+    <a href="mailto:contact@empcaring.com" class="header-email"><i class="ph ph-envelope"></i><span>contact@empcaring.com</span></a>
+    <div class="header-cta"><a href="../contact.html" class="btn btn--primary">Get a Quote</a></div>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false"><div class="hamburger__line"><span></span><span></span><span></span></div></button>
+  </div>
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <a href="../index.html" class="mobile-menu__link">Home</a><a href="../products.html" class="mobile-menu__link">Products</a>
+    <a href="../blog.html" class="mobile-menu__link">Blog</a><a href="../about.html" class="mobile-menu__link">About</a><a href="../contact.html" class="mobile-menu__link">Contact</a>
+    <div class="mobile-menu__cta"><a href="../contact.html" class="btn btn--primary btn--lg" style="width:100%">Get a Quote</a></div>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="../index.html" class="breadcrumbs__item">Home</a><span class="breadcrumbs__separator">/</span>
+      <a href="../blog.html" class="breadcrumbs__item">Blog</a><span class="breadcrumbs__separator">/</span>
+      <span class="breadcrumbs__item breadcrumbs__item--current" aria-current="page">How to Start a DME Business</span>
+    </nav>
+  </div>
+
+  <article class="article-body">
+    <header class="page-hero" style="padding-block: var(--space-12) var(--space-8); min-height: auto;">
+      <div class="container container--narrow">
+        <div class="blog-card__meta" style="margin-bottom: var(--space-4);">
+          <span class="blog-card__tag">Procurement Guide</span>
+          <span class="blog-card__date">October 21, 2026</span>
+          <span style="font-size: var(--text-xs); color: var(--color-text-muted);" data-reading-time></span>
+        </div>
+        <h1 class="page-hero__title" itemprop="headline" style="font-size: var(--text-4xl);">How to start a DME business: the equipment sourcing guide</h1>
+        <p class="page-hero__subtitle" style="font-style: italic;">A practical startup guide for new DME suppliers: the licensing and enrollment sequence, a realistic starter product mix, manufacturer vs distributor sourcing, and the landed-cost math that decides whether imported lifts make you money.</p>
+      </div>
+    </header>
+
+    <div class="container container--narrow" style="padding-block: var(--space-12);">
+      <div class="content-width" style="margin-inline: auto;">
+
+        <div class="key-takeaways">
+          <p class="key-takeaways__title">What's in this guide</p>
+          <ul>
+            <li>The real barrier to entry in DME is process, not capital — most of it is paperwork you can start this week</li>
+            <li>Sequence matters: NPI number first, then state licensure, then Medicare Part B enrollment</li>
+            <li>A common year-one path: start with cash-pay customers while Medicare enrollment runs in parallel</li>
+            <li>Manufacturer-direct vs distributor sourcing decides your margin structure before you sell a single unit</li>
+            <li>Price imported equipment on landed cost — ex-works price plus freight, insurance, entry fees, and tariffs — never on the invoice alone</li>
+          </ul>
+        </div>
+
+        <p style="font-size: var(--text-lg); line-height: var(--leading-relaxed); margin-bottom: var(--space-8);">
+          The durable medical equipment business is one of the few retail-adjacent trades where demand trends one way over time. US populations are aging, and care keeps shifting toward home and community settings — every one of which needs transfer chairs, patient lifts, commodes, and mobility aids. That guarantees no individual supplier success, but it does mean the market does not disappear on you the way a trend product does.</p>
+        <p style="font-size: var(--text-lg); line-height: var(--leading-relaxed); margin-bottom: var(--space-8);">
+          Here is what most new entrants get wrong: they spend their first month comparing lift models and their last month discovering the business was never about product selection. It is about sequence — what you register first, what you license second, how you enroll, where you buy, and how you calculate what a unit costs once it is on your shelf. This guide walks through that sequence from the sourcing side, written by a manufacturer who ships containers of lifts into the US market.</p>
+
+        <h2 style="margin-top: var(--space-12); margin-bottom: var(--space-4);">The paperwork sequence: NPI, state license, Medicare enrollment</h2>
+        <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">
+          Before you pick a single product, line up three registrations, roughly in this order — each one feeds the next.</p>
+
+        <h3 style="margin-top: var(--space-8); margin-bottom: var(--space-3); font-size: var(--text-lg);">1. Get your NPI number</h3>
+        <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">
+          A National Provider Identifier is free, issued through the NPPES registry, and typically arrives within days. You will need it for nearly everything downstream: insurance billing, supplier applications, many state forms. Do it the week you decide to start.</p>
+
+        <h3 style="margin-top: var(--space-8); margin-bottom: var(--space-3); font-size: var(--text-lg);">2. Apply for state DME licensure</h3>
+        <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">
+          States diverge sharply here. Some require a dedicated DME license or permit with fees, inspections, or accreditation; others treat you like any other retailer. Go straight to your state health department's licensing pages and confirm current requirements before you sign a lease or place an order — and have an accountant weigh in early on sales tax and nexus.</p>
+
+        <h3 style="margin-top: var(--space-8); margin-bottom: var(--space-3); font-size: var(--text-lg);">3. Enroll as a Medicare Part B DME supplier</h3>
+        <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">
+          If you want to bill Medicare Part B for equipment claims, you must enroll as a DMEPOS supplier and meet the Supplier Standards — including posting a $50,000 surety bond. Approval commonly runs in weeks to months rather than days, so file early and expect follow-up requests.</p>
+
+        <p style="margin-bottom: var(--space-8); line-height: var(--leading-relaxed);">
+          The common year-one path: <strong>start with cash-pay customers while enrollment runs in parallel.</strong> Private-pay families, assisted living communities, and home health agencies that bill insurance themselves do not require your Medicare enrollment. Start selling to them, learn your operations on real orders, and by the time approval lands you will have sales history and references — and cash-pay often remains a permanent part of the revenue mix.</p>
+
+        <h2 style="margin-top: var(--space-12); margin-bottom: var(--space-4);">Your starter product mix</h2>
+        <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">
+          The categories that make sense in year one are the high-turnover ones: <strong>transfer chairs, patient lifts, commodes, canes, and grab bars.</strong> They are small enough to stock in a modest warehouse, consumed by exactly the demographic shift described above, and — as Class I devices — low-friction to import.</p>
+        <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">
+          Within that mix, lifts and transfer chairs work well as the anchor category. They are the higher-ticket items, so one institutional sale covers the margin of a shelf of accessories. More importantly, they bind relationships: a facility that trusts your lifts buys its other accessories from the same supplier, and facility managers talk to each other.</p>
+        <p style="margin-bottom: var(--space-8); line-height: var(--leading-relaxed);">
+          A note on breadth: <strong>catalog depth beats SKU count.</strong> Three or four lift and transfer chair models you can service indefinitely — consistent specs, spare parts on hand, staff who know the IFU — will out-earn thirty SKUs you cannot support. Browse the current <a href="../products.html">EMPCaring lift and transfer chair range</a> to see what a deliberately narrow, factory-direct catalog looks like, and our <a href="../blog/transfer-chair-buying-guide.html">transfer chair buying guide</a> lists what to check before a first order.</p>
+
+        <h2 style="margin-top: var(--space-12); margin-bottom: var(--space-4);">Sourcing: manufacturer-direct vs distributor</h2>
+        <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">
+          Once you know what you are stocking, the sourcing decision shapes your economics more than any negotiation will. Neither channel is universally better:</p>
+
+        <div style="overflow-x: auto; margin-bottom: var(--space-6);">
+          <table style="width: 100%; border-collapse: collapse; font-size: var(--text-sm); line-height: var(--leading-relaxed);">
+            <thead>
+              <tr style="background: var(--color-surface-alt); border-bottom: 2px solid var(--color-border);">
+                <th style="padding: var(--space-3) var(--space-4); text-align: left; font-weight: var(--font-semibold);">Factor</th>
+                <th style="padding: var(--space-3) var(--space-4); text-align: left; font-weight: var(--font-semibold);">Manufacturer-direct</th>
+                <th style="padding: var(--space-3) var(--space-4); text-align: left; font-weight: var(--font-semibold);">US distributor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--color-border);">
+                <td style="padding: var(--space-3) var(--space-4); font-weight: var(--font-semibold); vertical-align: top;">Unit price</td>
+                <td style="padding: var(--space-3) var(--space-4); vertical-align: top;">Lowest per unit, especially at container volume</td>
+                <td style="padding: var(--space-3) var(--space-4); vertical-align: top;">Higher — the distributor's margin is built in</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border);">
+                <td style="padding: var(--space-3) var(--space-4); font-weight: var(--font-semibold); vertical-align: top;">MOQ</td>
+                <td style="padding: var(--space-3) var(--space-4); vertical-align: top;">Typically a full container (often a 20ft minimum)</td>
+                <td style="padding: var(--space-3) var(--space-4); vertical-align: top;">Often single units or small case packs</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border);">
+                <td style="padding: var(--space-3) var(--space-4); font-weight: var(--font-semibold); vertical-align: top;">Lead time</td>
+                <td style="padding: var(--space-3) var(--space-4); vertical-align: top;">Production plus ocean transit — plan in weeks</td>
+                <td style="padding: var(--space-3) var(--space-4); vertical-align: top;">Immediate, off the shelf</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border);">
+                <td style="padding: var(--space-3) var(--space-4); font-weight: var(--font-semibold); vertical-align: top;">Your margin</td>
+                <td style="padding: var(--space-3) var(--space-4); vertical-align: top;">Widest, but you carry inventory and freight risk</td>
+                <td style="padding: var(--space-3) var(--space-4); vertical-align: top;">Thinner, with minimal inventory risk</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border);">
+                <td style="padding: var(--space-3) var(--space-4); font-weight: var(--font-semibold); vertical-align: top;">Customization / OEM</td>
+                <td style="padding: var(--space-3) var(--space-4); vertical-align: top;">Your logo, packaging, and manuals possible at the factory</td>
+                <td style="padding: var(--space-3) var(--space-4); vertical-align: top;">Usually none — you sell their brand</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border);">
+                <td style="padding: var(--space-3) var(--space-4); font-weight: var(--font-semibold); vertical-align: top;">After-sales support</td>
+                <td style="padding: var(--space-3) var(--space-4); vertical-align: top;">Direct from the factory; parts ship from abroad</td>
+                <td style="padding: var(--space-3) var(--space-4); vertical-align: top;">Local stock, faster swaps</td>
+              </tr>
+              <tr>
+                <td style="padding: var(--space-3) var(--space-4); font-weight: var(--font-semibold); vertical-align: top;">Best for</td>
+                <td style="padding: var(--space-3) var(--space-4); vertical-align: top;">Demonstrated demand, warehouse space, brand builders</td>
+                <td style="padding: var(--space-3) var(--space-4); vertical-align: top;">Year-one testing, urgent fill-in orders</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="margin-bottom: var(--space-8); line-height: var(--leading-relaxed);">
+          When does the distributor genuinely make sense? When you are placing small orders, when a customer is waiting and a factory lead time would lose the sale, and when you lack warehouse space or working capital. Many established suppliers run both channels deliberately. If you go factory-direct, vet the factory like a business partner; our <a href="../blog/how-to-choose-a-patient-lift-manufacturer.html">patient lift manufacturer audit checklist</a> covers that in detail.</p>
+
+        <h2 style="margin-top: var(--space-12); margin-bottom: var(--space-4);">The landed-cost math for imported equipment</h2>
+        <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">
+          This section protects your pricing. The most common importer mistake is comparing suppliers on the ex-works quote — the factory price before anything is moved, cleared, or delivered. Two quotes ten percent apart can land in the opposite ranking once the full cost of getting a unit onto your shelf is counted.</p>
+
+        <div style="background: var(--color-surface-alt); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-6); margin-bottom: var(--space-6);">
+          <p style="font-weight: var(--font-semibold); margin-bottom: var(--space-3);">Landed cost per unit:</p>
+          <p style="line-height: var(--leading-relaxed);"><strong>Ex-works price + ocean freight + marine insurance + customs entry fees + tariffs + last-mile delivery</strong> (port to your warehouse). Divide the container-level total across the units inside it — including the space packaging wastes — and you have the number your pricing has to clear.</p>
+        </div>
+
+        <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">
+          On classification: most patient lifts and transfer chairs fall under <strong>HTS heading 8713</strong>, the heading covering wheelchairs and other vehicles for disabled persons. Classification is product-specific and duty rates change, so confirm the exact subheading and rate with your customs broker. The same applies to tariffs: Section 301 additions on China-origin goods have commonly ranged from <strong>7.5% to 25%</strong> depending on product and list — the figure that matters is whatever applies to your confirmed HTS code on the date of entry. A broker will price this in an hour.</p>
+        <p style="margin-bottom: var(--space-8); line-height: var(--leading-relaxed);">
+          Run every sourcing comparison on landed cost: same specification, same freight, entry-fee, and duty assumptions, then rank the quotes. The supplier cheapest ex-works is often not the cheapest landed — and landed cost is the only one your bank account sees.</p>
+
+        <h2 style="margin-top: var(--space-12); margin-bottom: var(--space-4);">Compliance: what to collect from an overseas manufacturer</h2>
+        <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">
+          Most of the equipment in this guide is Class I — the lowest-risk FDA tier — so the compliance burden is modest. But as the importer, the documentation is yours to hold: when a customs entry is questioned or a facility audits you, the file you produce is the one your supplier sent you. Collect it before the PO.</p>
+
+        <div style="background: var(--color-surface-alt); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-6); margin-bottom: var(--space-6);">
+          <p style="font-weight: var(--font-semibold); margin-bottom: var(--space-4);">The six-document checklist:</p>
+          <ul style="padding-left: var(--space-6); line-height: var(--leading-relaxed);">
+            <li style="margin-bottom: var(--space-2);"><strong>FDA Establishment Registration Number</strong> — a 10-digit number; for foreign establishments it starts with 300XXXXXX. Verify it in the FDA's public registration database.</li>
+            <li style="margin-bottom: var(--space-2);"><strong>Device Listing Number</strong> for the specific model you are buying — not just "the company is registered."</li>
+            <li style="margin-bottom: var(--space-2);"><strong>English Instructions for Use (IFU)</strong> — intended use, weight capacity, warnings, and maintenance intervals, matching what is listed.</li>
+            <li style="margin-bottom: var(--space-2);"><strong>Test reports</strong> — static load, fatigue, and stability, with the testing lab and standard named.</li>
+            <li style="margin-bottom: var(--space-2);"><strong>US Agent contact details</strong> — the FDA requires foreign manufacturers to designate one; this is also your escalation contact.</li>
+            <li><strong>Written warranty and spare-parts terms</strong> — what is covered, for how long, and how parts ship.</li>
+          </ul>
+        </div>
+
+        <p style="margin-bottom: var(--space-8); line-height: var(--leading-relaxed);">
+          Each document deserves its own explanation, so we put the detail in a separate guide: <a href="../blog/fda-patient-lift-certification.html">what FDA registration and listing actually mean for patient lifts</a>. Read it before you wire any deposit.</p>
+
+        <h2 style="margin-top: var(--space-12); margin-bottom: var(--space-4);">OEM and private label: what a real factory offers</h2>
+        <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">
+          If you intend to build your own brand, the factory relationship is where that happens. A genuine manufacturer can put your logo on the chassis, print your packaging, and produce manuals and IFUs under your brand — with registration and testing evidence behind them. We offer exactly this on hydraulic and electric lifts rated to 150 kg (330 lbs): OEM and white-label programs covering logo, packaging, and documentation. We hold an FDA-registered establishment and maintain Class I device listings for the models we ship, factory-direct from our plant in Zhaoqing, China.</p>
+        <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">
+          Be realistic about MOQ. Customization carries setup costs on the factory side, so it is tied to container-scale orders — ours starts at a single 20ft container, mixed across lift and transfer chair models, with a standard lead time of around 35 days. If a supplier offers fully bespoke branding on tiny orders, ask where the product comes from.</p>
+        <p style="margin-bottom: var(--space-8); line-height: var(--leading-relaxed);">
+          That last point is the real test, because the market has no shortage of intermediaries presenting themselves as factories. The distinction is verifiable: a manufacturer can issue an Establishment Registration Number and Device Listing in its own name, name its testing labs, and walk you through the plant on a live video call. An intermediary forwards someone else's PDFs and hopes you do not compare letterheads.</p>
+
+        <h2 style="margin-top: var(--space-12); margin-bottom: var(--space-4);">Red flags when vetting suppliers</h2>
+        <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">
+          Most bad supplier outcomes announce themselves early, in the documents — or silence — that precede the quote. Walk away from:</p>
+
+        <div style="background: #fef2f2; border: 1px solid #fecaca; border-left: 4px solid #dc2626; border-radius: var(--radius-md); padding: var(--space-6); margin-bottom: var(--space-6);">
+          <ul style="padding-left: var(--space-6); line-height: var(--leading-relaxed); color: #7f1d1d;">
+            <li style="margin-bottom: var(--space-2);">Cannot produce an FDA Establishment Registration Number or a Device Listing Number for the exact model</li>
+            <li style="margin-bottom: var(--space-2);">Sends test reports with no lab name, no standard cited, or numbers that do not match the spec sheet</li>
+            <li style="margin-bottom: var(--space-2);">Quotes far below the band for an equivalent specification — the discount is coming out of the frame, the pump, or the welds</li>
+            <li style="margin-bottom: var(--space-2);">Declines a live video factory tour or only offers pre-recorded footage</li>
+            <li style="margin-bottom: var(--space-2);">No written spare-parts or warranty commitment — "we will take care of you" is not a term</li>
+            <li>Pressures you to pay the deposit before documents are delivered</li>
+          </ul>
+        </div>
+
+        <p style="margin-bottom: var(--space-8); line-height: var(--leading-relaxed);">
+          None of these flags necessarily mean fraud; several just mean a reseller who does not hold the documents. Either way the fix costs nothing: ask for the six documents first and let the suppliers who cannot produce them sort themselves out.</p>
+
+        <h2 style="margin-top: var(--space-12); margin-bottom: var(--space-4);">Build the sequence, then build the catalog</h2>
+        <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">
+          A DME business is not hard to start; it is easy to start in the wrong order. Register and license first, enroll while you sell cash-pay, stock deep in a few high-turnover categories, source on landed cost from a manufacturer who can document what they ship, and widen the catalog only as fast as service capacity grows.</p>
+        <p style="margin-bottom: var(--space-8); line-height: var(--leading-relaxed);">
+          If you are at the sourcing step and want a factory-direct benchmark for your pricing model, request our OEM and wholesale pack — specifications, OEM options, documentation — before you commit to anything.</p>
+
+        <h2 style="margin-top: var(--space-12); margin-bottom: var(--space-4);">FAQ</h2>
+
+        <div style="background: var(--color-surface-alt); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-6); margin-bottom: var(--space-8);">
+          <p style="font-weight: var(--font-semibold); margin-bottom: var(--space-2);">Do I need Medicare enrollment to start selling DME?</p>
+          <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">No — not to start. You can sell to cash-pay families, assisted living communities, and home health agencies without Medicare involvement. Part B DMEPOS enrollment is only required once you want to bill Medicare directly. Because approval runs in weeks to months, a common path is to start cash-pay and complete enrollment in parallel.</p>
+
+          <p style="font-weight: var(--font-semibold); margin-bottom: var(--space-2);">What licenses does a DME business need?</p>
+          <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">The baseline is an NPI number, a state DME license or permit where your state requires one (requirements vary widely, so check your state health department), and — if you will bill Medicare — enrollment as a Part B supplier that meets the Supplier Standards, including a surety bond. Add a resale certificate and local business registration where applicable.</p>
+
+          <p style="font-weight: var(--font-semibold); margin-bottom: var(--space-2);">What is a realistic MOQ when importing patient lifts?</p>
+          <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">For factory-direct orders, one full container is the normal starting point. Our own MOQ, for example, is a single 20ft container, mixed across lift and transfer chair models, with a standard lead time of around 35 days. If a container is too much for year one, a US distributor who holds stock is the more realistic entry point.</p>
+
+          <p style="font-weight: var(--font-semibold); margin-bottom: var(--space-2);">Should I buy from a manufacturer or a distributor first?</p>
+          <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">If you have warehouse space and container-scale capital, manufacturer-direct gives the best unit economics and OEM control. If you are testing demand with a handful of units, a distributor's small-order access and local stock usually beat the factory price advantage. Many suppliers end up doing both: distributor stock for fast fill-in, factory-direct for volume.</p>
+
+          <p style="font-weight: var(--font-semibold); margin-bottom: var(--space-2);">What documents do I need from an overseas manufacturer?</p>
+          <p style="line-height: var(--leading-relaxed);">Six items: the FDA Establishment Registration Number, the Device Listing Number for the specific model, an English IFU, test reports covering static load, fatigue, and stability, US Agent contact details, and written warranty and spare-parts terms. A real manufacturer produces this pack within days; a reseller typically cannot.</p>
+        </div>
+
+        <div style="background: var(--color-surface-alt); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-8); text-align: center; margin-bottom: var(--space-8);">
+          <h2 style="margin-bottom: var(--space-3);">Request the OEM/wholesale pack</h2>
+          <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">Specifications for our hydraulic and electric lifts and transfer chairs (150 kg / 330 lbs), OEM and white-label options, our six-document compliance pack, and container pricing — everything you need to build a landed-cost model. One email, no pressure.</p>
+          <a href="../contact.html" class="btn btn--primary btn--lg">Request the OEM/wholesale pack</a>
+        </div>
+
+        <p style="font-size: var(--text-sm); color: var(--color-text-muted); line-height: var(--leading-relaxed); border-top: 1px solid var(--color-border); padding-top: var(--space-4);">
+          <em>This article is for general guidance only and is not legal or tax advice. Licensing, registration, and tax requirements for DME businesses vary by state — consult an attorney and an accountant familiar with your state before you register. Tariff rates and HTS classifications change; confirm current figures with your licensed customs broker before building your pricing.</em>
+        </p>
+
+      </div>
+    </div>
+  </article>
+
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-col--brand">
+        <a href="../index.html" class="footer-logo" aria-label="EMPCaring Home"><img loading="lazy" src="../assets/images/logo 500x200.png" alt="EMPCaring" style="width:140px;height:auto;"></a>
+        <p class="footer-tagline">Factory-direct elderly care equipment. Real specs, real certifications, real supplier data.</p>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-title">Products</h3>
+        <ul class="footer-links">
+          <li><a href="../products.html">All Products</a></li>
+          <li><a href="../solutions/patient-lift.html">Patient Lift</a></li>
+          <li><a href="../assets/empcaring-product-catalog.pdf" download>Download Catalog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-title">Company</h3>
+        <ul class="footer-links">
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-title">Get a Quote</h3>
+        <p class="footer-tagline">Bulk pricing for nursing homes, hospitals, and distributors.</p>
+        <a href="../contact.html" class="btn btn--primary">Get a Quote</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 EMPCaring. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>
