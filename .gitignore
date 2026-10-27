@@ -1,3 +1,9 @@
 .playwright-mcp/
 node_modules/
 .DS_Store
+# Internal pricing files — never commit
+*price*
+*报价*
+PRICE_NOTES*
+*.xlsx
+!assets/*.xlsx
