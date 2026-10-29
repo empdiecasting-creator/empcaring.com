@@ -10,3 +10,4 @@ PRICE_NOTES*
 # Local tooling and exported share packages — site code only in this repo
 scripts/
 .trae-html-share-packages/
+HANDOFF.md
