@@ -7,3 +7,6 @@ node_modules/
 PRICE_NOTES*
 *.xlsx
 !assets/*.xlsx
+# Local tooling and exported share packages — site code only in this repo
+scripts/
+.trae-html-share-packages/
