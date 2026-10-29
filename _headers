@@ -4,15 +4,16 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
 
-# Static assets: cache for 1 year (immutable)
+# Images / fonts / PDF: one week (filenames are not fingerprinted, so no "immutable")
 /assets/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=604800
 
+# CSS / JS: short cache — an edit must reach visitors within the hour
 /css/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=3600, must-revalidate
 
 /js/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=3600, must-revalidate
 
 # HTML: always revalidate
 /*.html
