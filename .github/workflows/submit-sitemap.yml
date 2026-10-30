@@ -1,4 +1,4 @@
-name: Submit Sitemap
+name: Submit URLs to Search Engines
 
 # Triggers when sitemap or blog content changes on master
 on:
@@ -10,26 +10,43 @@ on:
       - '.github/workflows/submit-sitemap.yml'
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   submit:
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
     steps:
+      - uses: actions/checkout@v4
+
       - name: Wait for Cloudflare Pages deployment
-        run: sleep 120
+        run: sleep 90
 
-      - name: Ping Bing / idxnow with updated sitemap
+      - name: Verify sitemap and IndexNow key are live
         run: |
-          echo "Submitting sitemap to Bing Webmaster Tools..."
-          STATUS=$(curl -s -o /dev/null -w "%{http_code}" "https://www.bing.com/ping?sitemap=https://empcaring.com/sitemap.xml")
-          echo "Bing ping response: HTTP $STATUS"
+          S=$(curl -s -o /dev/null -w "%{http_code}" "https://empcaring.com/sitemap.xml")
+          K=$(curl -s -o /dev/null -w "%{http_code}" "https://empcaring.com/indexnow-key.txt")
+          echo "sitemap: HTTP $S / indexnow-key: HTTP $K"
+          if [ "$S" != "200" ]; then echo "::error::sitemap not reachable (HTTP $S)"; exit 1; fi
+          if [ "$K" != "200" ]; then echo "::error::IndexNow key file not reachable (HTTP $K)"; exit 1; fi
 
-      - name: Verify sitemap is reachable
+      - name: Submit sitemap URLs to IndexNow (Bing, Yandex, Seznam, Naver)
         run: |
-          echo "Verifying sitemap is publicly accessible..."
-          STATUS=$(curl -s -o /dev/null -w "%{http_code}" "https://empcaring.com/sitemap.xml")
-          echo "Sitemap status: HTTP $STATUS"
-          if [ "$STATUS" != "200" ]; then
-            echo "::warning::Sitemap not reachable (HTTP $STATUS). Cloudflare deployment may still be in progress."
-          fi
+          KEY=$(tr -d '[:space:]' < indexnow-key.txt)
+          URLS=$(grep -o '<loc>[^<]*</loc>' sitemap.xml | sed 's/<[^>]*>//g' | jq -R -s -c 'split("\n") | map(select(length > 0))')
+          COUNT=$(printf '%s' "$URLS" | jq 'length')
+          echo "Submitting $COUNT URLs to IndexNow"
+          CODE=$(curl -s -o /tmp/indexnow.out -w "%{http_code}" -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "{\"host\":\"empcaring.com\",\"key\":\"$KEY\",\"keyLocation\":\"https://empcaring.com/$KEY.txt\",\"urlList\":$URLS}")
+          echo "IndexNow HTTP $CODE"
+          cat /tmp/indexnow.out || true
+          if [ "$CODE" != "200" ] && [ "$CODE" != "202" ]; then echo "::error::IndexNow rejected the submission (HTTP $CODE)"; exit 1; fi
+
+      - name: Note about Google
+        run: |
+          echo "Google ignores IndexNow and deprecated the Bing sitemap ping endpoint in 2022."
+          echo "Google discovery relies on the sitemap submitted once in Search Console plus internal links;"
+          echo "re-submitting the same sitemap does not speed up indexing."
