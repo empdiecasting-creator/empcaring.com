@@ -1,4 +1,4 @@
-.playwright-mcp/
+﻿.playwright-mcp/
 node_modules/
 .DS_Store
 # Internal pricing files — never commit
@@ -11,3 +11,4 @@ PRICE_NOTES*
 scripts/
 .trae-html-share-packages/
 HANDOFF.md
+.dsh-vision-router/
