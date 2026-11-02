@@ -1,0 +1,306 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DME benefit management explained: how medical necessity, prior authorization, coding and resupply rules decide whether a supplier gets paid.">
+
+  <title>DME Benefit Management Explained: Where Claims Go Wrong | EMPCaring</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/blog.css">
+  <link rel="icon" href="../assets/images/logo150x150.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "DME Benefit Management Explained: Where Claims Actually Go Wrong",
+    "description": "DME benefit management explained: how medical necessity, prior authorization, coding and resupply rules decide whether a supplier gets paid, and why denials happen.",
+    "datePublished": "2026-11-02",
+    "author": {"@type": "Organization", "name": "EMPCaring"},
+    "publisher": {"@type": "Organization", "name": "EMPCaring"},
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://empcaring.com/blog/dme-benefit-management-explained"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"What is DME benefit management?","acceptedAnswer":{"@type":"Answer","text":"DME benefit management is the work a supplier does between an order and a payment: verifying the patient's coverage, confirming the equipment is medically necessary, getting prior authorization where the payer requires it, supplying the right billing code and documentation, and managing rental periods and resupply so the claim survives an audit. It is administrative work, but it decides whether the sale is profitable."}},
+      {"@type":"Question","name":"Why do DME claims get denied?","acceptedAnswer":{"@type":"Answer","text":"The most common reasons are documentation gaps rather than ineligible patients: missing or unsigned physician orders, a diagnosis that does not support the item, equipment delivered that differs from what was ordered or coded, missing proof of delivery, prior authorization not obtained, and resupply sent before the permitted window. Each is avoidable with a checklist applied before dispatch."}},
+      {"@type":"Question","name":"What is the difference between a rental and a purchase in DME?","acceptedAnswer":{"@type":"Answer","text":"Some equipment categories are paid as capped rentals: the supplier bills monthly up to a cap, after which the patient owns the equipment. Other items are purchased outright. Which applies depends on the payer's classification of the item, so the same physical product can be a rental under one plan and a purchase under another. Getting the classification wrong changes the entire revenue schedule."}},
+      {"@type":"Question","name":"What documentation should a manufacturer provide to help a DME supplier bill?","acceptedAnswer":{"@type":"Answer","text":"A spec sheet that matches what actually ships, the load-test method and result, the exact regulatory status (registered establishment, device listing, or neither), a consistent product description and weight so the item is coded correctly, and a clear statement of what is included versus optional. Suppliers cannot bill what they cannot document, and they pass that requirement back to the manufacturer."}},
+      {"@type":"Question","name":"Does benefit management matter for cash-pay equipment like transfer chairs?","acceptedAnswer":{"@type":"Answer","text":"Yes, in a different way. Cash-pay sales skip the claim entirely, but the buyer still needs the same facts: what the product does, what it fits, what is included, and what the regulatory status is. When a family or facility pays directly, the specification page becomes the entire due-diligence process."}}
+    ]
+  }
+  </script>
+  <script src="../js/ga.js" async></script>
+  <link rel="canonical" href="https://empcaring.com/blog/dme-benefit-management-explained">
+</head>
+<body>
+
+<a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+<header class="site-header" role="banner">
+  <div class="site-header__inner">
+    <a href="../index.html" class="site-logo" aria-label="EMPCaring Home"><img loading="lazy" src="../assets/images/logo 500x200.png" alt="EMPCaring" style="width:150px;height:auto;"></a>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <a href="../index.html" class="nav__link">Home</a><a href="../products.html" class="nav__link">Products</a>
+      <a href="../blog.html" class="nav__link">Blog</a><a href="../about.html" class="nav__link">About</a><a href="../contact.html" class="nav__link">Contact</a>
+    </nav>
+    <a href="mailto:contact@empcaring.com" class="header-email"><i class="ph ph-envelope"></i><span>contact@empcaring.com</span></a>
+    <div class="header-cta"><a href="../contact.html" class="btn btn--primary">Get a Quote</a></div>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false"><div class="hamburger__line"><span></span><span></span><span></span></div></button>
+  </div>
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <a href="../index.html" class="mobile-menu__link">Home</a><a href="../products.html" class="mobile-menu__link">Products</a>
+    <a href="../blog.html" class="mobile-menu__link">Blog</a><a href="../about.html" class="mobile-menu__link">About</a><a href="../contact.html" class="mobile-menu__link">Contact</a>
+    <div class="mobile-menu__cta"><a href="../contact.html" class="btn btn--primary btn--lg" style="width:100%">Get a Quote</a></div>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="../index.html" class="breadcrumbs__item">Home</a><span class="breadcrumbs__separator">/</span>
+      <a href="../blog.html" class="breadcrumbs__item">Blog</a><span class="breadcrumbs__separator">/</span>
+      <span class="breadcrumbs__item breadcrumbs__item--current" aria-current="page">DME benefit management</span>
+    </nav>
+  </div>
+
+  <article class="article-body">
+    <header class="page-hero" style="padding-block: var(--space-12) var(--space-8); min-height: auto;">
+      <div class="container container--narrow">
+        <div class="blog-card__meta" style="margin-bottom: var(--space-4);">
+          <span class="blog-card__tag">DME Operations</span>
+          <span class="blog-card__date">November 2, 2026</span>
+          <span style="font-size: var(--text-xs); color: var(--color-text-muted);" data-reading-time></span>
+        </div>
+        <h1 class="page-hero__title" itemprop="headline" style="font-size: var(--text-4xl);">DME benefit management explained: where claims actually go wrong</h1>
+        <p class="page-hero__subtitle" style="font-style: italic;">Most DME claims are lost long before they reach a payer — in a missing signature, a diagnosis code that does not match the item, or a resupply that shipped two weeks early. This is the workflow that decides whether a supplier gets paid, and the documentation a manufacturer owes them.</p>
+      </div>
+    </header>
+
+    <div class="container container--narrow" style="padding-block: var(--space-12);">
+      <div class="content-width" style="margin-inline: auto;">
+
+        <div class="key-takeaways">
+          <p class="key-takeaways__title">What's in this guide</p>
+          <ul>
+            <li>What "benefit management" actually covers, in plain terms</li>
+            <li>The five gates between an order and a payment</li>
+            <li>The seven denial reasons that account for most lost revenue</li>
+            <li>Rental versus purchase, and why the same product can be both</li>
+            <li>Resupply: the rules that turn a good customer into a chargeback</li>
+            <li>What a manufacturer must document so the supplier can bill</li>
+          </ul>
+        </div>
+
+        <p style="font-size: var(--text-lg); margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">
+          When a DME supplier says "we manage benefits", they are describing everything that happens between a clinician deciding a patient needs equipment and money arriving. It is not one task. It is verification, authorisation, coding, delivery proof, rental tracking, resupply scheduling, and audit response — and a gap in any one of them turns a delivered product into an unpaid invoice.
+        </p>
+        <p style="font-size: var(--text-lg); margin-bottom: var(--space-8); line-height: var(--leading-relaxed);">
+          This matters to a manufacturer for a blunt reason: the supplier's margin is set by how many of their claims survive. If your documentation makes their paperwork harder, you are raising their effective cost even when your unit price is lower.
+        </p>
+
+        <h2 style="margin-top: var(--space-12); margin-bottom: var(--space-4);">The five gates between an order and a payment</h2>
+        <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">
+          Every payer path looks slightly different, but the sequence is consistent. Fail at gate three and it does not matter how good gates one and two were.
+        </p>
+
+        <div style="overflow-x: auto; margin-bottom: var(--space-8);">
+          <table style="width: 100%; border-collapse: collapse; font-size: var(--text-sm); line-height: var(--leading-relaxed);">
+            <thead>
+              <tr style="background: var(--color-surface-alt); border-bottom: 2px solid var(--color-border);">
+                <th style="padding: var(--space-3) var(--space-4); text-align: left; font-weight: var(--font-semibold);">Gate</th>
+                <th style="padding: var(--space-3) var(--space-4); text-align: left; font-weight: var(--font-semibold);">Question being answered</th>
+                <th style="padding: var(--space-3) var(--space-4); text-align: left; font-weight: var(--font-semibold);">Failure looks like</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--color-border);">
+                <td style="padding: var(--space-3) var(--space-4); font-weight: var(--font-semibold); vertical-align: top;">1. Eligibility</td>
+                <td style="padding: var(--space-3) var(--space-4); vertical-align: top;">Is this patient covered, and for this category?</td>
+                <td style="padding: var(--space-3) var(--space-4); vertical-align: top;">Delivered, then discovered inactive coverage.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border);">
+                <td style="padding: var(--space-3) var(--space-4); font-weight: var(--font-semibold); vertical-align: top;">2. Medical necessity</td>
+                <td style="padding: var(--space-3) var(--space-4); vertical-align: top;">Does the clinical record support this item?</td>
+                <td style="padding: var(--space-3) var(--space-4); vertical-align: top;">A valid order that cites a diagnosis the item does not fit.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border);">
+                <td style="padding: var(--space-3) var(--space-4); font-weight: var(--font-semibold); vertical-align: top;">3. Authorisation</td>
+                <td style="padding: var(--space-3) var(--space-4); vertical-align: top;">Does this payer require prior approval for this code?</td>
+                <td style="padding: var(--space-3) var(--space-4); vertical-align: top;">Shipped on a verbal yes; the payer wanted paperwork first.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border);">
+                <td style="padding: var(--space-3) var(--space-4); font-weight: var(--font-semibold); vertical-align: top;">4. Coding and delivery</td>
+                <td style="padding: var(--space-3) var(--space-4); vertical-align: top;">Is the code right, and can delivery be proven?</td>
+                <td style="padding: var(--space-3) var(--space-4); vertical-align: top;">A similar-but-different item billed, no signed proof of delivery.</td>
+              </tr>
+              <tr>
+                <td style="padding: var(--space-3) var(--space-4); font-weight: var(--font-semibold); vertical-align: top;">5. Ongoing</td>
+                <td style="padding: var(--space-3) var(--space-4); vertical-align: top;">Rental period, resupply windows, audit trail.</td>
+                <td style="padding: var(--space-3) var(--space-4); vertical-align: top;">Resupply ahead of the allowed window; no record of who asked.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 style="margin-top: var(--space-12); margin-bottom: var(--space-4);">The seven denial reasons that account for most lost revenue</h2>
+        <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">
+          Auditors and denials managers see the same short list over and over. None of it is exotic; all of it is procedural.
+        </p>
+        <ol style="padding-left: var(--space-6); line-height: var(--leading-relaxed); margin-bottom: var(--space-8);">
+          <li style="margin-bottom: var(--space-3);"><strong>No signature where one is required.</strong> An order that was never signed, or signed after delivery. The date matters as much as the signature.</li>
+          <li style="margin-bottom: var(--space-3);"><strong>Diagnosis does not support the item.</strong> The code and the chart tell two different stories. This is the most expensive kind of denial because it is only fixable before dispatch.</li>
+          <li style="margin-bottom: var(--space-3);"><strong>Item delivered does not match the order.</strong> Upgraded model, substituted accessory, or a configuration the ordering clinician never approved.</li>
+          <li style="margin-bottom: var(--space-3);"><strong>Missing proof of delivery.</strong> No name, signature, or date showing who received the equipment and when.</li>
+          <li style="margin-bottom: var(--space-3);"><strong>Authorisation bypassed.</strong> Someone confirmed eligibility but not the authorisation requirement for that specific code.</li>
+          <li style="margin-bottom: var(--space-3);"><strong>Resupply outside the window.</strong> Sent because the patient rang, not because the rules permitted it — and the caller is rarely the patient.</li>
+          <li><strong>No record of the conversation.</strong> In audit, an unwritten call did not happen. Who requested it, what was discussed, what was shipped, and who said yes.</li>
+        </ol>
+
+        <h2 style="margin-top: var(--space-12); margin-bottom: var(--space-4);">Rental versus purchase: the same product, two revenue models</h2>
+        <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">
+          Some categories are reimbursed as capped rentals — billed monthly up to a ceiling, after which ownership transfers to the patient. Others are purchased outright. Which one applies depends on how the payer classifies the item, not on what the item physically is. That means identical equipment can be a rental under one plan and a purchase under another, and misclassifying it does not just delay payment — it changes the shape of the revenue for the whole year.
+        </p>
+        <p style="margin-bottom: var(--space-8); line-height: var(--leading-relaxed);">
+          For a manufacturer, the consequence is that the same product may show up in one supplier's catalogue as a rented item and in another's as a cash-sale item. That is not confusion; it is two go-to-market motions for one SKU. Products that are frequently bought with cash — a patient lift transfer chair is one, because the need is often immediate — need a specification page good enough to sell without a rep, because that is the entire due-diligence process for a family buyer.
+        </p>
+
+        <h2 style="margin-top: var(--space-12); margin-bottom: var(--space-4);">Resupply: the rules that turn good customers into chargebacks</h2>
+        <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">
+          Resupply is where volume and compliance collide. Suppliers get repeat revenue from accessories and consumables, and payers watch for it. The tension produces a simple rule: contact frequency cannot be driven by a sales calendar, and every outreach has to be documented — who was contacted, what they said, whether they actually wanted the item, and whether the permitted interval had elapsed.
+        </p>
+        <p style="margin-bottom: var(--space-8); line-height: var(--leading-relaxed);">
+          For durable equipment this mostly disappears — you do not resupply a steel frame. But it explains a structural difference between the equipment you sell and the supplies you might add later. Equipment revenue is lumpy and margin-heavy; supplies revenue is recurring and audit-heavy. A supplier adding a new equipment line is usually trying to buy back the first kind.
+        </p>
+
+        <h2 style="margin-top: var(--space-12); margin-bottom: var(--space-4);">What a manufacturer owes the supplier's billing team</h2>
+        <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">
+          This is the part most factories get wrong, and it is entirely within their control:
+        </p>
+        <ul style="margin-bottom: var(--space-8); line-height: var(--leading-relaxed);">
+          <li style="margin-bottom: var(--space-3);"><strong>A spec sheet that matches what ships.</strong> Not a marketing sheet. Weights, dimensions, seat-height range, load rating, and the difference between standard and optional.</li>
+          <li style="margin-bottom: var(--space-3);"><strong>Load-test method and result.</strong> Method plus number. "Heavy duty" is not a test result.</li>
+          <li style="margin-bottom: var(--space-3);"><strong>Exact regulatory status.</strong> Registered establishment, device listing, or neither — stated precisely, in the same words, on every document. Suppliers get audited on consistency.</li>
+          <li style="margin-bottom: var(--space-3);"><strong>A stable product description.</strong> If the description drifts between the catalogue, the invoice, and the label, someone's coding breaks.</li>
+          <li><strong>Included versus optional, in writing.</strong> A commode bucket that is standard on one model and an add-on on another is a billing discrepancy waiting to happen.</li>
+        </ul>
+
+        <h2 style="margin-top: var(--space-12); margin-bottom: var(--space-4);">Where this leaves a new supplier</h2>
+        <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">
+          Benefit management is not glamorous, and it is the reason DME has a moat: the paperwork is the business. A supplier who has built the workflow will not switch manufacturers to save two dollars a unit if it means re-validating documentation. That is also the opening for a new supplier — if your documentation is cleaner than the incumbent's, you are not asking them to take a risk, you are offering to reduce one.
+        </p>
+        <p style="margin-bottom: var(--space-8); line-height: var(--leading-relaxed);">
+          For the wider picture — definitions, categories, and who buys what — start with <a href="../dme.html">our DME sector guide</a>. If you are setting up as a supplier rather than sourcing, <a href="how-to-start-a-dme-business.html">how to start a DME business</a> covers accreditation, licensure, and payer enrolment in order.
+        </p>
+
+        <figure style="margin-bottom: var(--space-8);">
+          <img loading="lazy" src="../assets/images/factory-office.jpg" alt="EMPCaring office and quality records in Zhaoqing, where load-test documentation and product records are kept" style="width: 100%; border-radius: var(--radius-md);">
+          <figcaption style="font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-3); text-align: center;">Specification and load-test records are kept as documents, not as claims on a website — because that is what a supplier's billing team can use.</figcaption>
+        </figure>
+
+        <h2 style="margin-top: var(--space-12); margin-bottom: var(--space-4);">FAQ</h2>
+
+        <div style="background: var(--color-surface-alt); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-6); margin-bottom: var(--space-8);">
+          <p style="font-weight: var(--font-semibold); margin-bottom: var(--space-2);">What is DME benefit management?</p>
+          <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">DME benefit management is the work a supplier does between an order and a payment: verifying the patient's coverage, confirming the equipment is medically necessary, getting prior authorization where the payer requires it, supplying the right billing code and documentation, and managing rental periods and resupply so the claim survives an audit. It is administrative work, but it decides whether the sale is profitable.</p>
+
+          <p style="font-weight: var(--font-semibold); margin-bottom: var(--space-2);">Why do DME claims get denied?</p>
+          <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">The most common reasons are documentation gaps rather than ineligible patients: missing or unsigned physician orders, a diagnosis that does not support the item, equipment delivered that differs from what was ordered or coded, missing proof of delivery, prior authorization not obtained, and resupply sent before the permitted window. Each is avoidable with a checklist applied before dispatch.</p>
+
+          <p style="font-weight: var(--font-semibold); margin-bottom: var(--space-2);">What is the difference between a rental and a purchase in DME?</p>
+          <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">Some equipment categories are paid as capped rentals: the supplier bills monthly up to a cap, after which the patient owns the equipment. Other items are purchased outright. Which applies depends on the payer's classification of the item, so the same physical product can be a rental under one plan and a purchase under another. Getting the classification wrong changes the entire revenue schedule.</p>
+
+          <p style="font-weight: var(--font-semibold); margin-bottom: var(--space-2);">What documentation should a manufacturer provide to help a DME supplier bill?</p>
+          <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">A spec sheet that matches what actually ships, the load-test method and result, the exact regulatory status (registered establishment, device listing, or neither), a consistent product description and weight so the item is coded correctly, and a clear statement of what is included versus optional. Suppliers cannot bill what they cannot document, and they pass that requirement back to the manufacturer.</p>
+
+          <p style="font-weight: var(--font-semibold); margin-bottom: var(--space-2);">Does benefit management matter for cash-pay equipment like transfer chairs?</p>
+          <p style="line-height: var(--leading-relaxed);">Yes, in a different way. Cash-pay sales skip the claim entirely, but the buyer still needs the same facts: what the product does, what it fits, what is included, and what the regulatory status is. When a family or facility pays directly, the specification page becomes the entire due-diligence process.</p>
+        </div>
+
+        <div style="background: var(--color-surface-alt); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-8); text-align: center; margin-bottom: var(--space-8);">
+          <h2 style="margin-bottom: var(--space-3);">Need documentation that survives an audit?</h2>
+          <p style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">We supply patient lift transfer chairs with the paperwork a DME billing team asks for: spec sheet that matches the shipment, load-test method and result, FDA registration with device listing on file, and a written standard-versus-optional list. 150 kg capacity, manual, hydraulic, and electric, OEM and private-label available.</p>
+          <a href="../contact.html" class="btn btn--primary btn--lg">Request Documentation</a>
+        </div>
+
+        <p style="font-size: var(--text-sm); color: var(--color-text-muted); line-height: var(--leading-relaxed); border-top: 1px solid var(--color-border); padding-top: var(--space-4); margin-bottom: var(--space-8);">
+          <em>This article is a general explanation of DME billing workflow and is not legal, billing, coding, or compliance advice. Coverage rules and documentation requirements differ by payer, by state, and by product category — confirm current requirements with the relevant payer before relying on anything here.</em>
+        </p>
+
+        <div style="margin-top: var(--space-8);">
+          <p style="font-weight: var(--font-semibold); margin-bottom: var(--space-3);">Related guides you may want:</p>
+          <ul style="line-height: var(--leading-relaxed);">
+            <li style="margin-bottom: var(--space-2);"><a href="../dme.html">DME explained: what durable medical equipment is and how it gets paid for</a></li>
+            <li style="margin-bottom: var(--space-2);"><a href="what-is-dme-durable-medical-equipment.html">What is DME? Durable medical equipment explained</a></li>
+            <li style="margin-bottom: var(--space-2);"><a href="how-to-start-a-dme-business.html">How to start a DME business</a></li>
+            <li style="margin-bottom: var(--space-2);"><a href="how-to-choose-a-patient-lift-manufacturer.html">How to choose a patient lift manufacturer</a></li>
+            <li style="margin-bottom: var(--space-2);"><a href="patient-lift-transfer-chair-complete-guide.html">Patient lift transfer chair: the complete buying guide</a></li>
+            <li style="margin-bottom: var(--space-2);"><a href="patient-lift-transfer-chair-installation.html">How to assemble and install a patient lift transfer chair</a></li>
+            <li style="margin-bottom: var(--space-2);"><a href="patient-lift-transfer-chair-accessories.html">Accessories and add-ons explained</a></li>
+            <li style="margin-bottom: var(--space-2);"><a href="compact-narrow-doorway-patient-lift-transfer-chair.html">Compact models for narrow doorways</a></li>
+            <li><a href="../solutions/patient-lift-transfer-chair.html">Patient lift transfer chair: manual, hydraulic and electric</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-col--brand">
+        <a href="../index.html" class="footer-logo" aria-label="EMPCaring Home"><img loading="lazy" src="../assets/images/logo 500x200.png" alt="EMPCaring" style="width:140px;height:auto;"></a>
+        <p class="footer-tagline">FDA registered senior care equipment manufacturer. Real specs, real test data, real supplier data.</p>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-title">Products</h3>
+        <ul class="footer-links">
+          <li><a href="../products.html">All Products</a></li>
+          <li><a href="../solutions/patient-lift-transfer-chair.html">Patient Lift Transfer Chair</a></li>
+          <li><a href="../assets/empcaring-product-catalog.pdf" download>Download Catalog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-title">Company</h3>
+        <ul class="footer-links">
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-title">Get a Quote</h3>
+        <p class="footer-tagline">Bulk pricing for nursing homes, hospitals, and distributors.</p>
+        <a href="../contact.html" class="btn btn--primary">Get a Quote</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 EMPCaring. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>
