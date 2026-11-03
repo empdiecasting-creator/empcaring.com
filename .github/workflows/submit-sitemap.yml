@@ -26,11 +26,17 @@ jobs:
 
       - name: Verify sitemap and IndexNow key are live
         run: |
+          # IndexNow verifies the site by fetching https://empcaring.com/<key>.txt,
+          # so the key file must be named after the key itself, not "indexnow-key.txt".
+          KEY=$(tr -d '[:space:]' < indexnow-key.txt)
+          echo "key: $KEY"
           S=$(curl -s -o /dev/null -w "%{http_code}" "https://empcaring.com/sitemap.xml")
-          K=$(curl -s -o /dev/null -w "%{http_code}" "https://empcaring.com/indexnow-key.txt")
-          echo "sitemap: HTTP $S / indexnow-key: HTTP $K"
+          K=$(curl -s -o /dev/null -w "%{http_code}" "https://empcaring.com/$KEY.txt")
+          B=$(curl -s "https://empcaring.com/$KEY.txt")
+          echo "sitemap: HTTP $S / key file: HTTP $K"
           if [ "$S" != "200" ]; then echo "::error::sitemap not reachable (HTTP $S)"; exit 1; fi
-          if [ "$K" != "200" ]; then echo "::error::IndexNow key file not reachable (HTTP $K)"; exit 1; fi
+          if [ "$K" != "200" ]; then echo "::error::IndexNow key file https://empcaring.com/$KEY.txt not reachable (HTTP $K)"; exit 1; fi
+          if [ "$(printf '%s' "$B" | tr -d '[:space:]')" != "$KEY" ]; then echo "::error::key file content does not match the key"; exit 1; fi
 
       - name: Submit sitemap URLs to IndexNow (Bing, Yandex, Seznam, Naver)
         run: |
