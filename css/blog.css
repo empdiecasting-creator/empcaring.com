@@ -139,3 +139,32 @@
   font-weight: var(--font-medium);
   color: var(--color-text);
 }
+
+/* ---- Blog Groups (themed sections on the listing page) ---- */
+.blog-groups {
+  display: block;
+}
+
+.blog-group + .blog-group {
+  margin-top: var(--space-16);
+  padding-top: var(--space-12);
+  border-top: 1px solid var(--color-border);
+}
+
+.blog-group__title {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-2);
+}
+
+.blog-group__desc {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-6);
+  max-width: 720px;
+  line-height: var(--leading-relaxed);
+}
+
+@media (min-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
