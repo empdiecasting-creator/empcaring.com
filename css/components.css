@@ -981,7 +981,7 @@ details[open] .faq-item__question::after {
 .video-split {
   display: grid;
   gap: var(--space-10);
-  align-items: center;
+  align-items: start;
 }
 
 @media (min-width: 900px) {
@@ -1045,4 +1045,13 @@ details[open] .faq-item__question::after {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
   text-align: center;
+}
+/* Article pages: keep the video stacked so the text column never gets squeezed */
+.video-split.video-split--stack {
+  display: block;
+}
+
+.video-split--stack .video-portrait {
+  margin-top: var(--space-6);
+  max-width: 340px;
 }
