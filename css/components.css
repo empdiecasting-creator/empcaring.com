@@ -976,3 +976,73 @@ details[open] .faq-item__question::after {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ---- Vertical (portrait) video slot ---- */
+.video-split {
+  display: grid;
+  gap: var(--space-10);
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .video-split {
+    grid-template-columns: 1fr 380px;
+    gap: var(--space-16);
+  }
+}
+
+.video-split__body > p:last-child {
+  margin-bottom: 0;
+}
+
+.video-portrait {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  margin-inline: auto;
+  aspect-ratio: 9 / 16;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #10261F;
+  box-shadow: 0 24px 60px rgba(16, 38, 31, 0.22);
+}
+
+.video-portrait video,
+.video-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-portrait__play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  padding: 0;
+  background: rgba(16, 38, 31, 0.28);
+  cursor: pointer;
+}
+
+.video-portrait__play span {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.94);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: var(--color-primary);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.video-portrait__caption {
+  margin-top: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  text-align: center;
+}
