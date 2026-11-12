@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -12,9 +12,9 @@
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="css/variables.css?v=41f98af5">
   <link rel="stylesheet" href="css/reset.css?v=a17e4533">
-  <link rel="stylesheet" href="css/base.css?v=321d9631">
+  <link rel="stylesheet" href="css/base.css?v=b3194bbc">
   <link rel="stylesheet" href="css/layout.css?v=d635a66b">
-  <link rel="stylesheet" href="css/components.css?v=d2ebbd78">
+  <link rel="stylesheet" href="css/components.css?v=e21be0f2">
   <link rel="stylesheet" href="css/header.css?v=385c7ee2">
   <link rel="stylesheet" href="css/footer.css?v=e4017c35">
   <link rel="icon" href="assets/images/logo150x150.png">
@@ -26,14 +26,8 @@
     "description": "Contact EMPCaring for volume pricing, product samples, and procurement inquiries. Serving nursing homes, hospitals, and assisted living facilities worldwide."
   }
   </script>
-  <!-- GA4 — inline for reliable event tracking -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WCJEF00XZ0"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-WCJEF00XZ0');
-  </script>
+  <!-- GA4: loaded synchronously here so gtag() is ready before forms.js runs -->
+  <script src="js/ga.js?v=e6a184b3"></script>
   <link rel="canonical" href="https://empcaring.com/contact">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="EMPCaring">
@@ -252,7 +246,7 @@
 <button class="back-to-top" aria-label="Back to top"><i class="ph ph-arrow-up"></i></button>
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <script>document.getElementById('_ts').value = Date.now();</script>
-<script src="js/main.js?v=92b73b0d" defer></script>
+<script src="js/main.js?v=3dd54cf3" defer></script>
 <script src="js/forms.js?v=f1ea470b" defer></script>
 
 </body>

@@ -11,9 +11,11 @@
 # CSS / JS: short cache — an edit must reach visitors within the hour
 /css/*
   Cache-Control: public, max-age=3600, must-revalidate
+  Content-Type: text/css; charset=utf-8
 
 /js/*
   Cache-Control: public, max-age=3600, must-revalidate
+  Content-Type: application/javascript; charset=utf-8
 
 # HTML: always revalidate
 /*.html

@@ -235,6 +235,9 @@
 
   /* ==========================================================
      Cookie Consent Banner
+     ----------------------------------------------------------
+     The choice is stored in localStorage and applied by js/ga.js
+     (Consent Mode v2 + removal of existing GA cookies on decline).
      ========================================================== */
 
   if (!localStorage.getItem('cookie-consent')) {
@@ -247,16 +250,38 @@
     }
     cookieBanner.innerHTML =
       '<div class="cookie-banner__inner">' +
-      '<p class="cookie-banner__text">This site uses analytics cookies to understand how visitors find and use our content. By continuing, you agree to our <a href="' + pp + '">privacy policy</a>.</p>' +
+      '<p class="cookie-banner__text">We use analytics cookies to see how visitors find and use our pages. Accept to keep them on, or decline and we will not track you. See our <a href="' + pp + '">privacy policy</a>.</p>' +
+      '<div class="cookie-banner__actions">' +
+      '<button class="cookie-banner__btn cookie-banner__btn--ghost" id="cookie-decline">Decline</button>' +
       '<button class="cookie-banner__btn" id="cookie-accept">Accept</button>' +
+      '</div>' +
       '</div>';
     document.body.appendChild(cookieBanner);
 
-    var acceptBtn = document.getElementById('cookie-accept');
-    acceptBtn.addEventListener('click', function () {
-      localStorage.setItem('cookie-consent', 'accepted');
+    var closeBanner = function () {
       cookieBanner.classList.add('cookie-banner--hidden');
       setTimeout(function () { cookieBanner.remove(); }, 300);
+    };
+
+    // Apply the choice through js/ga.js when it is ready; if it has not run
+    // yet (async script), persist and reload so the next page load honours it.
+    var applyChoice = function (choice) {
+      try { localStorage.setItem('cookie-consent', choice); } catch (e) {}
+      if (window.empcaringConsent) {
+        if (choice === 'accepted') { window.empcaringConsent.grant(); }
+        else { window.empcaringConsent.deny(); }
+        closeBanner();
+      } else {
+        closeBanner();
+        window.location.reload();
+      }
+    };
+
+    document.getElementById('cookie-accept').addEventListener('click', function () {
+      applyChoice('accepted');
+    });
+    document.getElementById('cookie-decline').addEventListener('click', function () {
+      applyChoice('declined');
     });
   }
 })();
